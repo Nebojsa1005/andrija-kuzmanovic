@@ -1,5 +1,16 @@
-.container {
+.bg-color {
     background-color: #333333;
-    height: 100vh;
-    width: 100%vw;
+}
+
+.container {
+    height: calc(100vh - (111px + 137px));
+    width: 100vw !important;
+    overflow-y: auto;
+    /* scrollbar styles */
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+}
+
+.container::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
 }

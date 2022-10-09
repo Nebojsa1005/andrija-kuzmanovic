@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+import { CarouselModule } from 'ng-carousel-cdk';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import { HomeRoutingModule } from './home-routing.module';
 
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomeComponent } from './home.component';
 
 @NgModule({
@@ -9,8 +11,10 @@ import { HomeComponent } from './home.component';
     HomeComponent
   ],
   imports: [
-    BrowserModule,
-    BrowserAnimationsModule
+    CommonModule,
+    CarouselModule,
+    MatToolbarModule,
+    HomeRoutingModule
   ],
   providers: [],
 })

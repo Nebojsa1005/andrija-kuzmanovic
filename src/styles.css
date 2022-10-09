@@ -1,7 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+/* @tailwind components; */
+@tailwind utilities;
 
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+    font-family: 'Carot Display' !important;
+    font-size: 30px;
+    line-height: 36px;
+    color: white;
 }
+
+.title {
+    font-weight: 700 !important;
+    font-size: 80px !important;
+    line-height: 96px !important;
+}
+
+.section-title {
+    font-size: 50px
+}
+
+ul {
+    margin: none;
+}
+
+/* Navigation styles start */
+.link {
+    font-weight: 700;
+    color: #929292;
+}
+
+.active {
+    color: #FFFFFF;
+}
+/* Navigation styles end */
+

@@ -1,9 +1,12 @@
-import { HomeComponent } from './pages/home/home.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }
+  { path: '', loadChildren: () => import('./pages/home/home.module').then(m => m.HomeModule) },
+  { path: 'about', loadChildren: () => import('./pages/about/about.module').then(m => m.AboutModule) },
+  { path: 'work', loadChildren: () => import('./pages/work/work.module').then(m => m.WorkModule) },
+  { path: 'contact', component: ContactComponent }
 ];
 
 @NgModule({
