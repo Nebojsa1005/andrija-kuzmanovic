@@ -1,0 +1,44 @@
+.active {
+    background-color: white !important;
+    transform: rotate(45deg);
+}
+
+.carouse-slide {
+    overflow: hidden !important;
+
+}
+
+.carousel-block {
+    position: relative;
+    overflow: hidden;
+}
+
+.control-panel {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.bullet-button {
+    padding: 0.5rem;
+    background-color: #929292;
+    border-radius: 2px;
+    transition: all 0.25s ease-in-out;
+    
+}
+
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz - grab;
+    cursor: -webkit - grab;
+ }
+ 
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+ .grabbable:active {
+    cursor: grabbing;
+    cursor: -moz - grabbing;
+    cursor: -webkit - grabbing;
+ }
