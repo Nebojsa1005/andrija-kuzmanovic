@@ -3,6 +3,9 @@
 /* @tailwind components; */
 @tailwind utilities;
 
+
+@import "cursor";
+
 * {
     padding: 0px;
     margin: 0px;
@@ -13,10 +16,37 @@
     color: white;
 }
 
+:root {
+    --primary-bg: #161616;
+    --darken-text: #929292
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    /* height: calc(100vh - (111px + 137px)); */
+    width: 100vw !important;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
 .title {
     font-weight: 700 !important;
-    font-size: 80px !important;
-    line-height: 96px !important;
+    font-size: 5rem !important;
+    line-height: 6rem !important;
+}
+
+.side-padding {
+    padding-right: 9.375rem;
+    padding-left: 9.375rem;
 }
 
 .section-title {
@@ -27,14 +57,48 @@ ul {
     margin: none;
 }
 
+.text-dark {
+    color: var(--darken-text);
+}
+
 /* Navigation styles start */
 .link {
     font-weight: 700;
-    color: #929292;
+    color: var(--darken-text);
 }
 
-.active {
-    color: #FFFFFF;
+.active,
+.link:hover {
+    color: white;
 }
-/* Navigation styles end */
 
+.image-shadow-container {
+    max-height: 50rem;
+    transition: all 0.25s ease-in-out;
+}
+
+.image-shadow-container:hover .product-image {
+    background-color: black;
+    opacity: 0.3;
+    transform: scale(1.1);
+}
+
+.image-shadow-container:hover .description {
+    display: inline-block;
+}
+
+.product-image {
+    transition: all 0.25s ease-in-out
+}
+
+.description {
+    display: none;
+    z-index: 1000;
+    font-size: 2.5rem;
+}
+
+/* mat icons */
+
+.mat-icon {
+    font-family: 'Material Icons' !important;
+}

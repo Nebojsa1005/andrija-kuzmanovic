@@ -1,0 +1,8 @@
+h1 {
+    font-size: 3.125rem;
+}
+
+.carousel-button {
+    opacity: 0.2;
+    background-color: var(--primary-bg);
+}

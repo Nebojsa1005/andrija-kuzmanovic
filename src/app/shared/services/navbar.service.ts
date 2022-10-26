@@ -5,8 +5,5 @@ import { BehaviorSubject } from 'rxjs'
   providedIn: 'root'
 })
 export class NavbarService {
-
   transparent = new BehaviorSubject(false)
-
-  constructor() { }
 }

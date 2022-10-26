@@ -1,1 +1,12 @@
-<p>contact works!</p>
+<div class="side-padding container">
+    <h1 class="title my-24">Contact</h1>
+   
+    <div class="flex justify-between w-full">
+        <ul>
+            <li class="my-8 flex" *ngFor="let item of contactInfo">
+                <img class="product-image w-9 h-auto mr-12" [src]="'../../../../../assets/contact/' + item.icon + '.png'">
+                <p>{{ item.data }}</p>
+            </li>
+        </ul>  
+    </div>
+</div>

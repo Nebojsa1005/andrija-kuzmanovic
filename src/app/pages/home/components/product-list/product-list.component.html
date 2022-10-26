@@ -1,0 +1,10 @@
+<ul class="w-full">
+    <li class="image-shadow-container max-h-full w-full overflow-hidden flex justify-center items-center" (click)="viewProduct(image.imageName)"
+        *ngFor="let image of productList">
+
+        <p [id]="image.description" class="description absolute">{{ image.description }}</p>
+        <img [id]="image.imageName" class="product-image w-full" (mousemove)="onElement(image.description, $event)"
+            [src]="'../../../../../assets/product-images/' + image.imageName + '.jpg'" [alt]="image.imageName">
+
+    </li>
+</ul>

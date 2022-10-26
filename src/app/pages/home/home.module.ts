@@ -6,17 +6,20 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 
 import {MatToolbarModule} from '@angular/material/toolbar';
-
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    CarouselComponent,
+    ProductListComponent
   ],
   imports: [
     CommonModule,
     CarouselModule,
     MatToolbarModule,
-    HomeRoutingModule,  ],
-  providers: [],
+    HomeRoutingModule
+  ]
 })
 export class HomeModule { }

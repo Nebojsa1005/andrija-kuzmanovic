@@ -1,6 +1,6 @@
-import { NavbarService } from './../../shared/services/navbar.service';
 import { Component, HostListener, OnInit } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Subject } from 'rxjs';
+import { NavbarService } from './../../shared/services/navbar.service';
 
 @Component({
   selector: 'app-navbar',
@@ -12,7 +12,7 @@ export class NavbarComponent implements OnInit {
   transparent$: any
   
   constructor(
-    private navbarService: NavbarService
+    private navbarService: NavbarService,
     ) { }
     
     ngOnInit(): void {
@@ -23,12 +23,10 @@ export class NavbarComponent implements OnInit {
 @HostListener('window:scroll', ['$event'])
 onWindowScroll() {
     let element = document.querySelector('.navbar') as HTMLElement;    
-    if (window.pageYOffset > element.clientHeight) {
+    if (window.pageYOffset > element.clientHeight && this.navbarService.transparent.value) {
       element.classList.add('navbar-inverse');
     } else {
       element.classList.remove('navbar-inverse');
     }
   }
-  
-
 }

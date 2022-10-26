@@ -1,26 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { Router, Event, NavigationStart, NavigationEnd, NavigationError} from '@angular/router';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-work',
   templateUrl: './work.component.html',
-  styleUrls: ['./work.component.css']
+  styleUrls: ['./work.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class WorkComponent implements OnInit {
+export class WorkComponent {
 
   constructor(
     private router: Router
   ) { }
 
-  currentRoute: any
 
   ngOnInit(): void {
-    this.router.events.subscribe((event: Event) => {
-      if (event instanceof NavigationEnd && event.url === '/work') {
-        this.router.navigate(['/work', 'all-projects'])
-      }
-  });
-  
+    // this.router.navigate(['/work', 'all-projects'])
   }
-
 }

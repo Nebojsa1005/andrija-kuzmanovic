@@ -7,17 +7,8 @@
     z-index: 1000;
 }
 
-.transparent a {
-    color: white
-}
-
 .navbar-inverse {
-    background-color: white !important;
-    opacity: 0.8;
-}
-
-.navbar-inverse a {
-    color: black !important;
+    background-color: #161616 !important;
 }
 
 nav, a{

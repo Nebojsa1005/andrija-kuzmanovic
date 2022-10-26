@@ -1,0 +1,12 @@
+.height {
+    /* treba da bude 50rem ali se sjebe par slika */
+    height: 42rem; 
+}
+
+.bigger {
+    width: 55%
+}
+
+.smaller {
+    width: 45%
+}
