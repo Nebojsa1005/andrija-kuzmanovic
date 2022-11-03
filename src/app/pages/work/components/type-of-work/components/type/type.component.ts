@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { DataService } from '../../../../../../shared/services/data.service';
 import { Component, Input, OnInit } from '@angular/core';
 import { CarouselAlignMode, CarouselConfig } from 'ng-carousel-cdk';
@@ -18,7 +19,8 @@ export class TypeComponent implements OnInit {
   wantedProducts: any = []
 
   constructor(
-    private dataService: DataService
+    private dataService: DataService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -26,12 +28,13 @@ export class TypeComponent implements OnInit {
   }
 
   initializeCarousel() {
-
     this.wantedProducts = this.dataService.getProductsByType(this.type)
-
+    
     this.config = {
       slideWidth: 42,
       alignMode: CarouselAlignMode.LEFT,
+      transitionDuration: 500,
+      autoplayDelay: 0,
       shouldLoop: false,
       items: this.wantedProducts,
       autoplayEnabled: false,
@@ -54,6 +57,11 @@ export class TypeComponent implements OnInit {
       recalculateDebounce: new FormControl(this.config.recalculateDebounce),
       allowKeyboardNavigation: new FormControl(this.config.allowKeyboardNavigation),
     });
+  
+  }
+
+  viewProduct(productName: string) {
+    this.router.navigate(['work','view', productName])
   }
 
 }

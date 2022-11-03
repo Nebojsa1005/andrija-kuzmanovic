@@ -3,6 +3,17 @@ h1 {
 }
 
 .carousel-button {
-    opacity: 0.2;
+    opacity: 0.8;
     background-color: var(--primary-bg);
+}
+
+.grabbable {
+    cursor: pointer;
+}
+.grabbable:active {
+    cursor: grabbing;
+}
+
+::ng-deep .carousel-block li:last-child .carousel-slide {
+    margin-right: 0;
 }

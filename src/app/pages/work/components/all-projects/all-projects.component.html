@@ -1,12 +1,15 @@
 <div class="w-full">
     <div class="flex height overflow-hidden items-center justify-between gap-8 mb-8"
-        *ngFor="let group of wantedProductList; let index = index">
-        <a [routerLink]="['../', 'view', image.name]" *ngFor="let image of group; let index = index"
-            class="image-shadow-container inline-flex items-center justify-center overflow-hidden flex justify-center items-center h-full"
+        *ngFor="let group of wantedProductList; let index = index; trackBy:identify">
+        <a [routerLink]="['../', 'view', image.name]" *ngFor="let image of group; let index = index;  trackBy:identify"
+            class="image-shadow-container items-center justify-center overflow-hidden flex h-full relative"
             [ngClass]="{'bigger': image.isBigger, 'smaller': !image.isBigger}">
-            <p class="description absolute">{{ image.shortDescription }}</p>
+            <p [id]="image.shortDescription" class="description absolute flex w-full justify-center items-center">{{ image.shortDescription }}</p>
             <img class="product-image w-full h-auto" [src]="'../../../../../assets/products/' + image.name + '/' + image.name + '.png'"
                 [alt]="image.description">
+            <!-- <img (mousemove)="onElement(image.shortDescription, $event)" class="product-image w-full h-auto" [src]="'../../../../../assets/products/' + image.name + '/' + image.name + '.png'"
+                [alt]="image.description"> -->
         </a>
     </div>
 </div>
+

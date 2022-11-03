@@ -30,7 +30,7 @@ export class DataService {
       isBigger: true
     },
     {
-      typeOfWork: '',
+      typeOfWork: 'UX / UI design',
       title: 'Insel Sleep',
       name: 'insel-sleep',
       shortDescription: 'Insel sleep webpage',
@@ -103,7 +103,7 @@ export class DataService {
       isBigger: true
     },
     {
-      typeOfWork: 'Packaging',
+      typeOfWork: 'UX / UI design',
       title: 'Ducati Genova webpage',
       name: 'ducati-genova-webpage',
       shortDescription: 'Ducati Genova webpage',
@@ -120,7 +120,7 @@ export class DataService {
       isBigger: true
     },
     {
-      typeOfWork: 'Brand Identity',
+      typeOfWork: 'UX / UI design',
       title: 'Immunity Chef',
       name: 'immunity-chef',
       shortDescription: 'Immunity Chef Branding',

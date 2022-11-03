@@ -1,6 +1,6 @@
 .height {
     /* treba da bude 50rem ali se sjebe par slika */
-    height: 42rem; 
+    height: 30rem; 
 }
 
 .bigger {
@@ -10,3 +10,4 @@
 .smaller {
     width: 45%
 }
+

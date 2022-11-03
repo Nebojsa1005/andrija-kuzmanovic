@@ -1,7 +1,7 @@
 <div class="w-full h-full min-h-screen min-w-screen bg-color relative">
   <app-navbar></app-navbar>
-  <!-- <div class="container w-full h-full"> -->
-    <router-outlet></router-outlet>
+  <!-- <div [@slideInAnimation]="o.isActivated ? o.activatedRoute : ''"> -->
+    <router-outlet #o="outlet"></router-outlet>
   <!-- </div> -->
   <app-footer></app-footer>
 </div>

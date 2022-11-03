@@ -1,8 +1,8 @@
 <div class="side-padding">
 
-    <h1 class="title my-24">About</h1>
+    <h1 class="title my-24 font-bold">About</h1>
 
-    <p>Hello, my name is Andrija. I am a professional graphic designer with over 2 years of experience. I have
+    <p class="my-24">Hello, my name is Andrija. I am a professional graphic designer with over 2 years of experience. I have
         experience in designing Business cards, Letterheads, Logos, Flyers, Social media posts, Products, Web sites and
         web applications. I use Figma, Adobe Xd, Illustrator, Photoshop, InDesign, Premiere Pro and After Effects to
         design the graphics for you. Not only that, but I will provide high-quality work that will make all of my
@@ -10,13 +10,13 @@
         then contact me.</p>
 
     <div>
-        <h3 class="section-title my-8">Work experience</h3>
-        <div class="flex items-start pb-8" *ngFor="let item of workExperience">
+        <h3 class="section-title mb-24 font-bold">Work experience</h3>
+        <div class="flex items-start mb-24" *ngFor="let item of workExperience">
             <img [src]="'../../../assets/about/' + item.companyName +'.png'">
-            <div class="ml-6">
-                <h3 class="section-title mb-2">{{ item.position }}</h3>
-                <p class="mb-2">{{ item.companyName }} -{{ item.type }}</p>
-                <p class="time-duration mb-2">{{ item.time }}</p>
+            <div class="ml-12">
+                <h3 class="section-title mb-3 font-bold">{{ item.position }}</h3>
+                <p class="mb-3">{{ item.companyName }} -{{ item.type }}</p>
+                <p class="time-duration mb-3">{{ item.time }}</p>
                 <ul>
                     <li *ngFor="let task of item.tasks">{{ task }}</li>
                 </ul>
@@ -25,12 +25,12 @@
     </div>
 
     <div>
-        <h3 class="section-title my-8">Education</h3>
-        <div class="flex items-start pb-8" *ngFor="let item of educations">
+        <h3 class="section-title my-24 font-bold">Education</h3>
+        <div class="flex items-start mb-24" *ngFor="let item of educations">
             <img [src]="'../../../assets/about/' + item.name +'.png'">
-            <div class="ml-6">
-                <h3 class="section-title mb-2">{{ item.name }}</h3>
-                <p class="time-duration mb-2">{{ item.time }}</p>
+            <div class="ml-12">
+                <h3 class="section-title mb-3 font-bold">{{ item.name }}</h3>
+                <p class="time-duration mb-3">{{ item.time }}</p>
             </div>
         </div>
     </div>

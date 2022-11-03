@@ -23,6 +23,8 @@
 
 html {
     font-size: 16px;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -30,8 +32,6 @@ body {
     width: 100vw !important;
     overflow-y: auto;
     -ms-overflow-style: none;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
@@ -50,7 +50,7 @@ body::-webkit-scrollbar {
 }
 
 .section-title {
-    font-size: 50px
+    font-size: 3.125rem;
 }
 
 ul {
@@ -84,7 +84,8 @@ ul {
 }
 
 .image-shadow-container:hover .description {
-    display: inline-block;
+    /* display: inline-block; */
+    opacity: 1;
 }
 
 .product-image {
@@ -92,9 +93,11 @@ ul {
 }
 
 .description {
-    display: none;
+    /* display: none; */
+    opacity: 0;
     z-index: 1000;
     font-size: 2.5rem;
+    transition: all 0.25s ease-in-out;
 }
 
 /* mat icons */
@@ -102,3 +105,19 @@ ul {
 .mat-icon {
     font-family: 'Material Icons' !important;
 }
+
+/* Carousel styles */
+
+.grabbable {
+    cursor: move; /* fallback if grab cursor is unsupported */
+    cursor: grab;
+    cursor: -moz - grab;
+    cursor: -webkit - grab;
+ }
+ 
+ /* (Optional) Apply a "closed-hand" cursor during drag operation. */
+ .grabbable:active {
+    cursor: grabbing;
+    cursor: -moz - grabbing;
+    cursor: -webkit - grabbing;
+ }

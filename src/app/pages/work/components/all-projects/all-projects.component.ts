@@ -10,77 +10,9 @@ import { AllProjectsItem } from 'src/app/pages/home/models/products';
 })
 export class AllProjectsComponent implements OnInit  {
 
-  // productList: any
-  productList: any = [
-    {
-      imageName: 'insel-sleep',
-      description: 'Insel webpage',
-      isBigger: true,
-    },
-    {
-      imageName: 'oshee-social-media',
-      description: 'Oshee social media',
-      isBigger: false
-    },
-    {
-      imageName: 'dasigo',
-      description: 'Dasigo webpage',
-      isBigger: false
-    },
-    {
-      imageName: 'oshee-energy-drink',
-      description: 'Oshee energy drink campaign',
-      isBigger: true
-    },
-    {
-      imageName: 'ducati-genova-webpage',
-      description: 'Ducati Genova webpage',
-      isBigger: true
-    },
-    {
-      imageName: 'immunity-chef',
-      description: 'Immunity Chef Branding',
-      isBigger: false
-    },
-    {
-      imageName: 'proteo-fit-chocolate-bar-white',
-      description: 'ProteFit chocolate bar',
-      isBigger: false
-    },
-    {
-      imageName: 'vintage-fest',
-      description: 'Vintage fest',
-      isBigger: true
-    },
-    {
-      imageName: 'caffe-d-italia-social-media',
-      description: "Caffe d' Italia social media",
-      isBigger: true
-    },
-    {
-      imageName: 'stara-rakija',
-      description: 'Stara rakija billboard',
-      isBigger: false
-    },
-    {
-      imageName: 'proteo-fit-chocolate-bar-dark',
-      description: "ProteoFit chocolate bar",
-      isBigger: false
-    },
-    {
-      imageName: 'urban-divine-brandy',
-      description: 'Urban divine brandy',
-      isBigger: true
-    },
-    {
-      imageName: 'urban-divine-brandy',
-      description: 'Urban divine brandy',
-      isBigger: false
-    }
-   
-  ]
+  productList: any = []
 
-  get wantedProductList(): any[][] {
+  get wantedProductList(): any {
 
     let wantedProductList: AllProjectsItem[][] = []
     let group: AllProjectsItem[] = []
@@ -90,17 +22,29 @@ export class AllProjectsComponent implements OnInit  {
         group = []
         wantedProductList.push(group)
       }
-
       group.push(product)
-
-    })
-    console.log(wantedProductList);
-    
+    })      
     return wantedProductList
   }
 
   constructor(private dataService: DataService) {}
+  
   ngOnInit(): void {
     this.productList = this.dataService.productList
   }
+  
+  
+  onElement(text: string, e: any) {   
+    let rect = e.target.getBoundingClientRect();
+
+    const description: any = document.getElementById(text);
+
+      description.style.left =( e.clientX - rect.left ) + 'px';
+      description.style.top = ( e.clientY - rect.top) + 'px';
+  }
+
+  identify(index: any, item: any) {
+    return item.shortDescription
+  }
+
 }
