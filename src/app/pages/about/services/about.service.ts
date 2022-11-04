@@ -7,7 +7,8 @@ import { WorkExperience } from '../models/work-experience';
 })
 export class AboutService {
 
-  constructor() { }
+  introductionText: string = "Hello, my name is Andrija. I am a professional graphic designer with over 2 years of experience. I have experience in designing Business cards, Letterheads, Logos, Flyers, Social media posts, Products, Web sites and web applications. I use Figma, Adobe Xd, Illustrator, Photoshop, InDesign, Premiere Pro and After Effects to design the graphics for you. Not only that, but I will provide high-quality work that will make all of my clients happy. I will complete many projects with customer satisfaction. If you have work related to my skills, then contact me."
+
 
   workExperience: WorkExperience[] = [
     {
@@ -16,10 +17,10 @@ export class AboutService {
       position: 'Graphic designer',
       time: 'May 2022 - Present',
       tasks: [
-        '• Helped 30 + clients in implementing their vision, mission and communicating their message through design by creating projects for them.',
-        '• Conceptualized 100+ posters, brochures, stationery, magazine, adverts, websites, photos, illustrations, vehicle wraps, product design...',
-        '• Met and discussed jobs with 20 + clients.',
-        '• Enhanced social media marketing by designing compiling campaigns.'
+        'Helped 30 + clients in implementing their vision, mission and communicating their message through design by creating projects for them.',
+        'Conceptualized 100+ posters, brochures, stationery, magazine, adverts, websites, photos, illustrations, vehicle wraps, product design...',
+        'Met and discussed jobs with 20 + clients.',
+        'Enhanced social media marketing by designing compiling campaigns.'
       ]
     },
     {
@@ -28,8 +29,8 @@ export class AboutService {
       position: 'Help desk specialist',
       time: 'April 2020 - May 2020',
       tasks: [
-        '• Coordinated, diagnosed and troubleshot incoming end-user requests.',
-        '• Provided technical support services to end-users either local or remote with problems or issues related to information technology services including but not limited to: Applications, workstations, conference rooms, collaboration services, and network services.'
+        'Coordinated, diagnosed and troubleshot incoming end-user requests.',
+        'Provided technical support services to end-users either local or remote with problems or issues related to information technology services including but not limited to: Applications, workstations, conference rooms, collaboration services, and network services.'
       ]
     },
     {
@@ -38,14 +39,15 @@ export class AboutService {
       position: 'Graphic design freelancer',
       time: 'June 2019 - April 2020',
       tasks: [
-        '• Helped 30+ clients in implementing their vision, mission and communicating their message through design by creating projects for them.',
-        '• Conceptualized 100+ posters, brochures, stationery, magazine, adverts, websites, photos, illustrations, vehicle wraps, product design...',
-        '• Met and discussed jobs with 20+ clients.',
-        '•Enhanced social media marketing by designing compiling campaigns.'
+        'Helped 30+ clients in implementing their vision, mission and communicating their message through design by creating projects for them.',
+        'Conceptualized 100+ posters, brochures, stationery, magazine, adverts, websites, photos, illustrations, vehicle wraps, product design...',
+        'Met and discussed jobs with 20+ clients.',
+        'Enhanced social media marketing by designing compiling campaigns.'
       ]
     }
   ]
 
+  // Education
   educations: Education[] = [
     {
       name: 'ICT College',

@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  // { path: '', pathMatch: 'full', redirectTo: 'work' },
+  { path: '', pathMatch: 'full', redirectTo: 'all-projects' },
   {
     path: '', component: WorkComponent, children: [
       { path: 'all-projects', component: AllProjectsComponent },

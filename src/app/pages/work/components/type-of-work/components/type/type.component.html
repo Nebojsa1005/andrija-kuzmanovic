@@ -7,7 +7,7 @@
         <ng-template
             [ngCarouselSlide]="carouselRef"
             let-item>
-            <div class="carousel-slide grabbable mr-12 image-shadow-container items-center justify-center overflow-hidden flex h-full relative" (click)="viewProduct(item.name)" ngCarouselPreventGhostClick>
+            <div class="carousel-slide grabbable mr-12 image-shadow-wrapper items-center justify-center overflow-hidden flex h-full relative" (click)="viewProduct(item.name)" ngCarouselPreventGhostClick>
                 <p [id]="item.shortDescription" class="description absolute flex w-full justify-center items-center">{{ item.shortDescription }}</p>
                 <img class="product-image" [src]="'../../../../../assets/products/' + item.name + '/' + item.name + '.png'" [alt]="item.name">
             </div>

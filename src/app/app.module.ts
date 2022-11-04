@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AngularMaterialModule } from './angular-material.module';
+
 @NgModule({
   declarations: [
     AppComponent,

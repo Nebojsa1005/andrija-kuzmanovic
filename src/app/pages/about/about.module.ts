@@ -11,6 +11,5 @@ import { CommonModule } from '@angular/common';
     CommonModule,
     AboutRoutingModule
   ],
-  providers: [],
 })
 export class AboutModule { }

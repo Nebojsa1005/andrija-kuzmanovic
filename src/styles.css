@@ -57,7 +57,7 @@ ul {
     margin: none;
 }
 
-.text-dark {
+.dark-text {
     color: var(--darken-text);
 }
 
@@ -72,18 +72,18 @@ ul {
     color: white;
 }
 
-.image-shadow-container {
+.image-shadow-wrapper {
     max-height: 50rem;
     transition: all 0.25s ease-in-out;
 }
 
-.image-shadow-container:hover .product-image {
+.image-shadow-wrapper:hover .product-image {
     background-color: black;
     opacity: 0.3;
     transform: scale(1.1);
 }
 
-.image-shadow-container:hover .description {
+.image-shadow-wrapper:hover .description {
     /* display: inline-block; */
     opacity: 1;
 }
@@ -101,23 +101,6 @@ ul {
 }
 
 /* mat icons */
-
 .mat-icon {
-    font-family: 'Material Icons' !important;
+    font-family: 'Material Icons';
 }
-
-/* Carousel styles */
-
-.grabbable {
-    cursor: move; /* fallback if grab cursor is unsupported */
-    cursor: grab;
-    cursor: -moz - grab;
-    cursor: -webkit - grab;
- }
- 
- /* (Optional) Apply a "closed-hand" cursor during drag operation. */
- .grabbable:active {
-    cursor: grabbing;
-    cursor: -moz - grabbing;
-    cursor: -webkit - grabbing;
- }

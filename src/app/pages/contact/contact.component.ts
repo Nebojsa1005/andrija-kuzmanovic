@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
   contactInfo: any = [
     { icon:  'info', type: 'text', data: 'Andrija Kuzmanović'},
@@ -14,11 +14,5 @@ export class ContactComponent implements OnInit {
     { icon: 'linked_in', type: 'text', data: 'linkedin.com/in/andrijakuzmanovic' },
     { icon: 'mail', type: 'text', data:'andrijakuzmanovicc@gmail.com' }
   ]
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 
 }

@@ -8,18 +8,25 @@ import { HomeComponent } from './home.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
+import { NgbCarouselComponent } from './components/ngb-carousel/ngb-carousel.component';
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     HomeComponent,
     CarouselComponent,
-    ProductListComponent
+    ProductListComponent,
+    NgbCarouselComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     CarouselModule,
     MatToolbarModule,
-    HomeRoutingModule
+    HomeRoutingModule,
+    NgbModule
   ]
 })
 export class HomeModule { }

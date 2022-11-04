@@ -43,7 +43,7 @@ export class CarouselComponent implements OnInit {
     this.itemIndex = newIndex;
   }
 
-  private getMaxWidth(mode?: CarouselWidthMode): number {
+  getMaxWidth(mode?: CarouselWidthMode): number {
     return mode === CarouselWidthMode.PERCENT ? this.MAX_WIDTH_PERCENTS : this.MAX_WIDTH_PIXELS;
   }
 
@@ -55,10 +55,10 @@ export class CarouselComponent implements OnInit {
       shouldLoop: true,
       items: this.carouselImages,
       autoplayEnabled: true,
-      dragEnabled: true,
+      dragEnabled: false,
       shouldRecalculateOnResize: true,
       recalculateDebounce: 300,
-      allowKeyboardNavigation: true,
+      allowKeyboardNavigation: false,
     };
 
     this.configForm = new FormGroup({

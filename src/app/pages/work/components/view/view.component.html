@@ -1,6 +1,6 @@
 <div *ngIf="product" class="w-full my-24 side-padding">
     <h1 class="title">{{ product.shortDescription }}</h1>
-    <h2 class="text-dark mb-12 text-4xl">{{ product.field }}</h2>
+    <h2 class="dark-text mb-12 text-4xl">{{ product.field }}</h2>
 
     <img class="product-image w-full mb-12"
         [src]="'../../../../../assets/products/' + product.name + '/' + product.name + '.png'">
@@ -13,8 +13,8 @@
 
     <div class="w-full mt-24">
         <p class="mb-12">{{ product.companyDescription }}</p>
-        <p class="mb-12 text-dark">Program Used: {{ product.program }}</p>
-        <p class="mb-12 text-dark">Visit the page</p>
+        <p class="mb-12 dark-text">Program Used: {{ product.program }}</p>
+        <p class="mb-12 dark-text">Visit the page</p>
     </div>
 
 </div>

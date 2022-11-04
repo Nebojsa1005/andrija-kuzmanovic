@@ -5,13 +5,17 @@ import { AboutService } from './services/about.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.css']
+  styleUrls: ['./about.component.css'],
 })
 export class AboutComponent {
 
-  workExperience: WorkExperience[] = this.aboutService.workExperience
-  educations: Education[] = this.aboutService.educations
+  workExperience?: WorkExperience[];
+  educations?: Education[];
+  introductionText?: string
 
-constructor( private aboutService: AboutService ) { }
-
+  constructor(private aboutService: AboutService) {
+    this.workExperience = this.aboutService.workExperience;
+    this.educations = this.aboutService.educations;
+    this.introductionText = this.aboutService.introductionText
+  }
 }

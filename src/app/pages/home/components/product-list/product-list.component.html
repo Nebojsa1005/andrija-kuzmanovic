@@ -1,5 +1,5 @@
 <ul class="w-full">
-    <li class="image-shadow-container max-h-full w-full overflow-hidden flex justify-center items-center" (click)="viewProduct(image.imageName)"
+    <li class="image-shadow-wrapper max-h-full w-full overflow-hidden flex justify-center items-center" (click)="viewProduct(image.imageName)"
         *ngFor="let image of productList">
 
         <p [id]="image.description" class="description absolute">{{ image.description }}</p>

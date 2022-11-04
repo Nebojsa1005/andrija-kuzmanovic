@@ -1,0 +1,10 @@
+<div class="h-screen">
+  <ngb-carousel [interval]="2000" #carousel [showNavigationArrows]="false">
+    <ng-template ngbSlide *ngFor="let img of images; index as i">
+        <div class="picsum-img-wrapper h-screen">
+          <img class="w-full" [src]="'../../../../../assets/product-images/' + img.name +'.jpg'" [alt]="img.name">
+      </div>
+    </ng-template>
+  </ngb-carousel>
+</div>
+
