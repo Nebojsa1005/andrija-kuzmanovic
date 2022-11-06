@@ -1,6 +1,6 @@
 import { Router } from '@angular/router';
 import { DataService } from '../../../../../../shared/services/data.service';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, HostListener, Input, OnInit } from '@angular/core';
 import { CarouselAlignMode, CarouselConfig } from 'ng-carousel-cdk';
 import { Product } from 'src/app/pages/home/models/products';
 import { FormControl, FormGroup } from '@angular/forms';
@@ -8,30 +8,27 @@ import { FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'app-type',
   templateUrl: './type.component.html',
-  styleUrls: ['./type.component.css']
+  styleUrls: ['./type.component.css'],
 })
 export class TypeComponent implements OnInit {
+  @Input() type: string = '';
 
-  @Input() type: string = ''
+  config: CarouselConfig<any> = {};
+  configForm: FormGroup = {} as FormGroup;
+  wantedProducts: any = [];
+  innerWidth?: number
 
-  config: CarouselConfig<any> = {}
-  configForm: FormGroup = {} as FormGroup
-  wantedProducts: any = []
-
-  constructor(
-    private dataService: DataService,
-    private router: Router
-  ) { }
+  constructor(private dataService: DataService, private router: Router) {}
 
   ngOnInit(): void {
-    this.initializeCarousel()
+    this.innerWidth = window.innerWidth;
+    this.initializeCarousel();
   }
-
   initializeCarousel() {
-    this.wantedProducts = this.dataService.getProductsByType(this.type)
-    
+    this.wantedProducts = this.dataService.getProductsByType(this.type);
+
     this.config = {
-      slideWidth: 42,
+      slideWidth: this.innerWidth && this.innerWidth > 640 ? 42 : 100,
       alignMode: CarouselAlignMode.LEFT,
       transitionDuration: 500,
       autoplayDelay: 0,
@@ -53,15 +50,17 @@ export class TypeComponent implements OnInit {
       slidesQuantity: new FormControl((this.config?.items ?? []).length),
       autoplayEnabled: new FormControl(this.config.autoplayEnabled),
       dragEnabled: new FormControl(this.config.dragEnabled),
-      shouldRecalculateOnResize: new FormControl(this.config.shouldRecalculateOnResize),
+      shouldRecalculateOnResize: new FormControl(
+        this.config.shouldRecalculateOnResize
+      ),
       recalculateDebounce: new FormControl(this.config.recalculateDebounce),
-      allowKeyboardNavigation: new FormControl(this.config.allowKeyboardNavigation),
+      allowKeyboardNavigation: new FormControl(
+        this.config.allowKeyboardNavigation
+      ),
     });
-  
   }
 
   viewProduct(productName: string) {
-    this.router.navigate(['work','view', productName])
+    this.router.navigate(['work', 'view', productName]);
   }
-
 }

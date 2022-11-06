@@ -8,28 +8,6 @@ export class DataService {
 
   productList: Product[] = [
     {
-      title: "Caffe'd Italia social media",
-      name: 'caffe-d-italia-social-media',
-      shortDescription: "Caffe d' Italia social media",
-      field: '',
-      typeOfWork: 'Social Media',
-      companyDescription: 'Caffè d’Italia has the ambitious project to bring everywhere and on every occasion, an espresso of the highest quality as the result of our passion and our system that makes the difference! Program used: Adobe Photoshop',
-      sideImages: [
-        [
-          { name: 'caffe-d-italia-social-media-1' },
-          { name: 'caffe-d-italia-social-media-2' },
-
-        ],
-        [
-          { name: 'caffe-d-italia-social-media-4' },
-          { name: 'caffe-d-italia-social-media-3' },
-        ]
-      ],
-      program: 'Adobe Photoshop',
-      link: 'https://www.caffeditalia.it/',
-      isBigger: true
-    },
-    {
       typeOfWork: 'UX / UI design',
       title: 'Insel Sleep',
       name: 'insel-sleep',
@@ -44,8 +22,8 @@ export class DataService {
       ],
       program: 'Figma',
       link: 'https://inselsleep.com/',
-
-      isBigger: false,
+  
+      isBigger: true,
     },
     {
       typeOfWork: 'Social Media',
@@ -66,7 +44,7 @@ export class DataService {
           { name: 'oshee-social-media-4' },
         ]
       ],
-      isBigger: false
+      isBigger: true
     },
     {
       typeOfWork: 'Packaging',
@@ -83,8 +61,9 @@ export class DataService {
           { name: 'dasigo-2' }
         ]
       ],
-      isBigger: true
+      isBigger: false
     },
+   
     {
       typeOfWork: 'Digital Design',
       title: 'Oshee energy drink',
@@ -137,38 +116,59 @@ export class DataService {
       isBigger: false
     },
     {
-
       typeOfWork: 'Packaging',
-      title: 'Proteo Fit Chocolate Bar',
-      name: 'proteo-fit-chocolate-bar-white',
+      title: 'Tesla charge batteries',
+      name: 'tesla-charge-batteries',
       field: 'Packaging / Product design',
-      companyDescription: 'Dasigo is primarily a family company that strives to maintain the spirit of the private companies that were formed. The spirit of family business and work that is reflected in good interpersonal relationships is imbued with the inspiration to create and create the best for consumers in the markets in which we operate.',
-      program: 'Adobe Illustrator',
+      companyDescription: 'Explore AA batteries, rechargeable batteries, chargers, coin button batteries and more from Tesla charge, the longer-lasting and trusted battery brand.',
       link: '',
       sideImages: [
         [
-          { name: 'proteo-fit-chocolate-bar-white-1' },
-          { name: 'proteo-fit-chocolate-bar-white-2' }
+          { name: 'tesla-charge-batteries-1' },
+          { name: 'tesla-charge-batteries-2' }
         ]
       ],
-      shortDescription: 'ProteFit chocolate bar',
+      program: 'Adobe Illustrator',
+      shortDescription: "Tesla charge batteries",
       isBigger: true
     },
     {
-      typeOfWork: 'Digital Design',
-      title: 'Vintage Fest',
-      name: 'vintage-fest',
-      shortDescription: 'Vintage fest',
-      field: 'Digital design / Festival design',
-      companyDescription: 'At the first Vintage Fest in Belgrade, numerous decorative objects, jewelry, wardrobes, frames, plaques and other interesting things that can beautify the home or complement the wardrobe with special and unique retro pieces will be exhibited.',
-      link: '',
+      typeOfWork: 'UX / UI design',
+      title: 'It’s GameTime',
+      name: 'its-game-time',
+      field: 'UX / UI design / Website & application design',
+      companyDescription: 'GameTime is a messaging, scheduling, and file-exchange Cloud solution that enhances the way sports teams communicate and operate.',
+      link: 'https://www.itsgametime.xyz/',
       sideImages: [
         [
-          { name: 'vintage-fest-1' },
-          { name: 'vintage-fest-2' }
+          { name: 'its-game-time-1' },
+          { name: 'its-game-time-2' }
+        ]
+      ],
+      program: 'Figma',
+      shortDescription: "It's GameTime website / app",
+      isBigger: true
+    },
+    {
+      title: "Caffe'd Italia social media",
+      name: 'caffe-d-italia-social-media',
+      shortDescription: "Caffe d' Italia social media",
+      field: '',
+      typeOfWork: 'Social Media',
+      companyDescription: 'Caffè d’Italia has the ambitious project to bring everywhere and on every occasion, an espresso of the highest quality as the result of our passion and our system that makes the difference! Program used: Adobe Photoshop',
+      sideImages: [
+        [
+          { name: 'caffe-d-italia-social-media-1' },
+          { name: 'caffe-d-italia-social-media-2' },
+
+        ],
+        [
+          { name: 'caffe-d-italia-social-media-4' },
+          { name: 'caffe-d-italia-social-media-3' },
         ]
       ],
       program: 'Adobe Photoshop',
+      link: 'https://www.caffeditalia.it/',
       isBigger: true
     },
     {
@@ -187,6 +187,40 @@ export class DataService {
       ],
       program: 'Adobe Illustrator',
       isBigger: false
+    },
+    {
+      typeOfWork: 'Packaging',
+      title: 'Proteo Fit Chocolate Bar',
+      name: 'proteo-fit-chocolate-bar-white',
+      field: 'Packaging / Product design',
+      companyDescription: 'Dasigo is primarily a family company that strives to maintain the spirit of the private companies that were formed. The spirit of family business and work that is reflected in good interpersonal relationships is imbued with the inspiration to create and create the best for consumers in the markets in which we operate.',
+      program: 'Adobe Illustrator',
+      link: '',
+      sideImages: [
+        [
+          { name: 'proteo-fit-chocolate-bar-white-1' },
+          { name: 'proteo-fit-chocolate-bar-white-2' }
+        ]
+      ],
+      shortDescription: 'ProteFit chocolate bar',
+      isBigger: true
+    },
+    {
+      typeOfWork: 'Digital Design',
+      title: '"Vintage Fest"',
+      name: 'vintage-fest',
+      shortDescription: '"Vintage fest"',
+      field: 'Digital design / Festival design',
+      companyDescription: 'At the first Vintage Fest in Belgrade, numerous decorative objects, jewelry, wardrobes, frames, plaques and other interesting things that can beautify the home or complement the wardrobe with special and unique retro pieces will be exhibited.',
+      link: '',
+      sideImages: [
+        [
+          { name: 'vintage-fest-1' },
+          { name: 'vintage-fest-2' }
+        ]
+      ],
+      program: 'Adobe Photoshop',
+      isBigger: true
     },
     {
       typeOfWork: 'Branding',
@@ -237,42 +271,8 @@ export class DataService {
       ],
       program: 'Adobe Illustrator',
       shortDescription: "ProteoFit chocolate bar",
-      isBigger: false
-    },
-    {
-      typeOfWork: 'Packaging',
-      title: 'Tesla charge batteries',
-      name: 'tesla-charge-batteries',
-      field: 'Packaging / Product design',
-      companyDescription: 'Explore AA batteries, rechargeable batteries, chargers, coin button batteries and more from Tesla charge, the longer-lasting and trusted battery brand.',
-      link: '',
-      sideImages: [
-        [
-          { name: 'tesla-charge-batteries-1' },
-          { name: 'tesla-charge-batteries-2' }
-        ]
-      ],
-      program: 'Adobe Illustrator',
-      shortDescription: "Tesla charge batteries",
       isBigger: true
-    },
-    {
-      typeOfWork: 'UX / UI design',
-      title: 'It’s GameTime',
-      name: 'its-game-time',
-      field: 'UX / UI design / Website & application design',
-      companyDescription: 'GameTime is a messaging, scheduling, and file-exchange Cloud solution that enhances the way sports teams communicate and operate.',
-      link: 'https://www.itsgametime.xyz/',
-      sideImages: [
-        [
-          { name: 'its-game-time-1' },
-          { name: 'its-game-time-2' }
-        ]
-      ],
-      program: 'Figma',
-      shortDescription: "It's GameTime website / app",
-      isBigger: true
-    },
+    }
   ]
 
   constructor() { }

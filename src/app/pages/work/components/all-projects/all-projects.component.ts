@@ -1,7 +1,6 @@
 import { Product } from './../../../home/models/products';
 import { DataService } from '../../../../shared/services/data.service';
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { AllProjectsItem } from 'src/app/pages/home/models/products';
 
 @Component({
   selector: 'app-all-projects',
@@ -36,10 +35,11 @@ export class AllProjectsComponent implements OnInit {
 
   ngOnInit(): void {
     this.productList = this.dataService.productList
+    this.mapOrder()
   }
 
   
-  mapOrder(types: string[]): string[] {
+  mapOrder() {
     const order: string[] = [
       'insel-webpage',
       'oshee-social-media',
@@ -56,13 +56,20 @@ export class AllProjectsComponent implements OnInit {
       'waterfront-market',
       'osteria-mozzarella-social-media',
       'proteo-fit-chocolate-bar-dark'
-  ]
+  ]  
+    
+    const names = this.productList.map((product: Product) => {
+      if (order.indexOf(product.name)) {
+        return product.name
+      } else {
+        return
+      } 
+    })
 
-    types.sort((a: string, b: string) => order.indexOf(a) - order.indexOf(b));
+    names.sort((a: Product, b: Product) => order.indexOf(a.name) - order.indexOf(b.name) );
 
-    return types;
+    console.log(names);
   };
-
 
 
   onElement(text: string, e: any) {

@@ -3,17 +3,14 @@
 /* @tailwind components; */
 @tailwind utilities;
 
-
-@import "cursor";
-
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
     font-family: 'Carot Display' !important;
-    font-size: 30px;
-    line-height: 36px;
-    color: white;
+    font-size: 1.875rem;
+    line-height: 2.25rem    ;
+    color: var(--darken-text);
 }
 
 :root {
@@ -40,11 +37,11 @@ body::-webkit-scrollbar {
 
 .title {
     font-weight: 700 !important;
-    font-size: 5rem !important;
-    line-height: 6rem !important;
+    /* font-size: 5rem !important; */
+    /* line-height: 6rem !important; */
 }
 
-.side-padding {
+.px-36 {
     padding-right: 9.375rem;
     padding-left: 9.375rem;
 }

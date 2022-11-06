@@ -1,5 +1,5 @@
 <div class="relative">
-    <h1 class="mb-12 side-padding">{{ type }}</h1>
+    <h1 class="md:mb-12 mb-4 md:px-36 px-4 md:text-5xl text-3xl">{{ type }}</h1>
     <ng-carousel
         #carouselRef="ngCarousel"
         [config]="config"
@@ -7,14 +7,14 @@
         <ng-template
             [ngCarouselSlide]="carouselRef"
             let-item>
-            <div class="carousel-slide grabbable mr-12 image-shadow-wrapper items-center justify-center overflow-hidden flex h-full relative" (click)="viewProduct(item.name)" ngCarouselPreventGhostClick>
+            <div class="carousel-slide grabbable md:mr-12 mr-4 image-shadow-wrapper items-center justify-center overflow-hidden flex h-full relative" (click)="viewProduct(item.name)" ngCarouselPreventGhostClick>
                 <p [id]="item.shortDescription" class="description absolute flex w-full justify-center items-center">{{ item.shortDescription }}</p>
                 <img class="product-image" [src]="'../../../../../assets/products/' + item.name + '/' + item.name + '.png'" [alt]="item.name">
             </div>
         </ng-template>
     </ng-carousel>   
 
-    <div *ngIf="wantedProducts.length > 2" class="control-panel absolute left-0 right-0 top-0 bottom-0 w-full px-12 flex justify-between items-center pointer-events-none">
+    <div *ngIf="wantedProducts.length > 2" class="control-panel absolute left-0 right-0 top-0 bottom-0 w-full px-12 md:flex hidden justify-between items-center pointer-events-none">
         <button
             (click)="carouselRef.prev()"
     

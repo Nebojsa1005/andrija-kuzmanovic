@@ -1,9 +1,17 @@
 <div class="w-full">
-    <div class="flex height overflow-hidden items-center justify-between gap-8 mb-8"
+    <div class="flex md:flex-row flex-col height overflow-hidden items-center justify-between gap-8 mb-8"
         *ngFor="let group of wantedProductList; let index = index; trackBy:identify">
         <a [routerLink]="['../', 'view', image.name]" *ngFor="let image of group; let index = index;  trackBy:identify"
-            class="image-shadow-wrapper items-center justify-center overflow-hidden flex h-full relative"
+            class="hidden md:flex image-shadow-wrapper items-center justify-center overflow-hidden flex h-full w-full relative"
             [ngClass]="{'bigger': image.isBigger, 'smaller': !image.isBigger}">
+            <p [id]="image.shortDescription" class="description absolute flex w-full justify-center items-center">{{ image.shortDescription }}</p>
+            <img class="product-image w-full h-auto" [src]="'../../../../../assets/products/' + image.name + '/' + image.name + '.png'"
+                [alt]="image.description">
+        </a>
+
+        <a [routerLink]="['../', 'view', image.name]" *ngFor="let image of group; let index = index;  trackBy:identify"
+            class="inline md:hidden image-shadow-wrapper items-center justify-center overflow-hidden flex h-full w-full relative"
+            >
             <p [id]="image.shortDescription" class="description absolute flex w-full justify-center items-center">{{ image.shortDescription }}</p>
             <img class="product-image w-full h-auto" [src]="'../../../../../assets/products/' + image.name + '/' + image.name + '.png'"
                 [alt]="image.description">

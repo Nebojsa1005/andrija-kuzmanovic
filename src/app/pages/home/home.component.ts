@@ -1,6 +1,7 @@
 
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { CarouselItem, ProductListItem } from './models/products';
+import { DataService } from 'src/app/shared/services/data.service';
+import { CarouselItem, Product, ProductListItem } from './models/products';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,10 @@ import { CarouselItem, ProductListItem } from './models/products';
   styleUrls: ['./home.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent  {
+export class HomeComponent {
 
+  order = ['dasigo', 'oshee-energy-drink', 'proteo-fit-chocolate-bar-white', 'vintage-fest', 'stara-rakija-billboard', 'immunity-chef']
+  productList?: Product[]
   carouselImages: CarouselItem[] = [
     { name: 'caffe-d-italia-social-media' },
     { name: 'ducati-genova' },
@@ -17,30 +20,10 @@ export class HomeComponent  {
     { name: 'insel-sleep' }
   ]
   
-  productList: ProductListItem[] = [
-    {
-      imageName: 'dasigo',
-      description: 'Dasigo webpage'
-    },
-    {
-      imageName: 'oshee-energy-drink',
-      description: 'Oshee energy drink campaign'
-    },
-    {
-      imageName: 'proteo-fit-chocolate-bar',
-      description: 'ProteoFIT chocolate bar package'
-    },
-    {
-      imageName: 'vintage-fest',
-      description: 'Vintage fest'
-    },
-    {
-      imageName: 'stara-rakija',
-      description: 'Stara rakija billboard'
-    },
-    {
-      imageName: 'immunity-chef',
-      description: 'Immunity Chef Branding'
-    }
-  ]
+
+  constructor( private dataService: DataService ) {
+    this.productList = this.dataService.productList
+    this.productList = this.productList?.filter((product: Product) => this.order.indexOf(product.name) >= 0)
+    this.productList.sort((a: Product, b: Product) => this.order.indexOf(a.name) - this.order.indexOf(b.name));
+  }
 }

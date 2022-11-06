@@ -1,25 +1,26 @@
-<div class="h-screen relative">
+<div class="h-[35vh] md:h-screen relative">
     <ng-carousel
         #carouselRef="ngCarousel"
         [config]="config"
         (itemIndexChange)="setItemIndex($event)"
-        class="carousel-block">
+        class="carousel-block relative overflow-hidden">
         <ng-template
             [ngCarouselSlide]="carouselRef"
             let-item
             let-active="isActive">
-            <div class="carousel-slide grabbable">
+            <div class="carousel-slide grabbable h-full w-auto">
+                <!-- <img [src]="'../../../../../assets/products/' + item.name + '/' + item.name + '.png'"> -->
                 <img [src]="'../../../../../assets/product-images/' + item.name +'.jpg'" [alt]="item.name">
             </div>
         </ng-template>
     </ng-carousel>
 
-    <div class="control-panel">
+    <div class="control-panel absolute bottom-2 md:bottom-8 w-full flex justify-center">
         <button
             *ngFor="let item of config.items; index as i;"
             [class.active]="i === itemIndex"
             (click)="carouselRef.setIndex(i)"
-            class="bullet-button mr-4"></button>
+            class="bullet-button mr-2 md:mr-4 p-1.5 md:p-2.5"></button>
     </div>
     
 </div>

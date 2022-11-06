@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProductListItem } from '../../models/products';
+import { Product } from '../../models/products';
 
 @Component({
   selector: 'app-product-list',
@@ -9,18 +9,12 @@ import { ProductListItem } from '../../models/products';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 
-export class ProductListComponent implements OnInit {
+export class ProductListComponent {
 
-  @Input() productList: ProductListItem[] = []
+  @Input() productList?: Product[] = []
 
+  
   constructor( private router: Router ) {}
-
-  ngOnInit(): void {
-
-  }
-
-  ngAfterViewInit() {
-  }
 
   onElement(text: string, e: any) {
     const description: any = document.getElementById(text);

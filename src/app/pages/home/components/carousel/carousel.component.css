@@ -8,20 +8,9 @@
 }
 
 .carousel-block {
-    position: relative;
-    overflow: hidden;
-}
-
-.control-panel {
-    position: absolute;
-    bottom: 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .bullet-button {
-    padding: 0.6rem;
     background-color: #929292;
     border-radius: 2px;
     transition: all 0.25s ease-in-out;
