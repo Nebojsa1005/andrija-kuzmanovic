@@ -226,7 +226,7 @@ export class DataService {
       typeOfWork: 'Packaging',
       title: 'Proteo Fit Chocolate Bar',
       name: 'proteo-fit-chocolate-bar-dark',
-      field: 'Packageing / Product design',
+      field: 'Packaging / Product design',
       companyDescription: 'Dasigo is primarily a family company that strives to maintain the spirit of the private companies that were formed. The spirit of family business and work that is reflected in good interpersonal relationships is imbued with the inspiration to create and create the best for consumers in the markets in which we operate.',
       link: '',
       sideImages: [
@@ -239,6 +239,40 @@ export class DataService {
       shortDescription: "ProteoFit chocolate bar",
       isBigger: false
     },
+    {
+      typeOfWork: 'Packaging',
+      title: 'Tesla charge batteries',
+      name: 'tesla-charge-batteries',
+      field: 'Packaging / Product design',
+      companyDescription: 'Explore AA batteries, rechargeable batteries, chargers, coin button batteries and more from Tesla charge, the longer-lasting and trusted battery brand.',
+      link: '',
+      sideImages: [
+        [
+          { name: 'tesla-charge-batteries-1' },
+          { name: 'tesla-charge-batteries-2' }
+        ]
+      ],
+      program: 'Adobe Illustrator',
+      shortDescription: "Tesla charge batteries",
+      isBigger: true
+    },
+    {
+      typeOfWork: 'UX / UI design',
+      title: 'It’s GameTime',
+      name: 'its-game-time',
+      field: 'UX / UI design / Website & application design',
+      companyDescription: 'GameTime is a messaging, scheduling, and file-exchange Cloud solution that enhances the way sports teams communicate and operate.',
+      link: 'https://www.itsgametime.xyz/',
+      sideImages: [
+        [
+          { name: 'its-game-time-1' },
+          { name: 'its-game-time-2' }
+        ]
+      ],
+      program: 'Figma',
+      shortDescription: "It's GameTime website / app",
+      isBigger: true
+    },
   ]
 
   constructor() { }
@@ -249,5 +283,9 @@ export class DataService {
 
   getProductsByType(type: string) {
     return this.productList.filter((product: Product) => product.typeOfWork === type)
+  }
+  
+  getProductByName(name: string) {
+    return this.productList.filter((product: Product) => product.name === name)[0]
   }
 }

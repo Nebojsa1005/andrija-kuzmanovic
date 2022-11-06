@@ -1,6 +1,4 @@
-import { filter, Subject, Subscription, takeUntil } from 'rxjs';
-import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { ChangeDetectionStrategy, Component, } from '@angular/core';
 
 @Component({
   selector: 'app-work',

@@ -5,7 +5,7 @@
     <img class="product-image w-full mb-12"
         [src]="'../../../../../assets/products/' + product.name + '/' + product.name + '.png'">
 
-    <div class="flex overflow-hidden w-full gap-12 justify-between items-center"
+    <div class="flex overflow-hidden w-full gap-12 mb-12 justify-between items-center"
         *ngFor="let group of product.sideImages">
         <img class="product-image w-1/2" *ngFor="let image of group"
             [src]="'../../../../../assets/products/' + product.name + '/' + image.name + '.png'">

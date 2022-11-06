@@ -10,7 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ViewComponent implements OnInit {
 
-  product?: Product 
+  product?: Product
 
   constructor(
     private route: ActivatedRoute,
@@ -19,9 +19,7 @@ export class ViewComponent implements OnInit {
 
   ngOnInit(): void {
     const productName = this.route.snapshot.params['productName']
-    this.product = this.dataService.getProduct(productName)    
-    console.log(this.product);
-    
+    this.product = this.dataService.getProduct(productName)
   }
 
 }

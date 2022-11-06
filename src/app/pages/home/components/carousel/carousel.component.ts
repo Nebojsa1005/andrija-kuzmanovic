@@ -50,12 +50,12 @@ export class CarouselComponent implements OnInit {
   initializeCarousel() {
     this.config = {
       slideWidth: 100,
-      transitionDuration: 1000,
+      transitionDuration: 1500,
       autoplayDelay: 2000,
       shouldLoop: true,
       items: this.carouselImages,
       autoplayEnabled: true,
-      dragEnabled: false,
+      dragEnabled: true,
       shouldRecalculateOnResize: true,
       recalculateDebounce: 300,
       allowKeyboardNavigation: false,
