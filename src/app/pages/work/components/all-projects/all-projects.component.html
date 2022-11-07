@@ -10,7 +10,7 @@
         </a>
 
         <a [routerLink]="['../', 'view', image.name]" *ngFor="let image of group; let index = index;  trackBy:identify"
-            class="inline md:hidden image-shadow-wrapper items-center justify-center overflow-hidden flex h-full w-full relative"
+            class="inline md:hidden image-shadow-wrapper items-center justify-center overflow-hidden flex w-full relative"
             >
             <p [id]="image.shortDescription" class="description absolute flex w-full justify-center items-center">{{ image.shortDescription }}</p>
             <img class="product-image w-full h-auto" [src]="'../../../../../assets/products/' + image.name + '/' + image.name + '.png'"

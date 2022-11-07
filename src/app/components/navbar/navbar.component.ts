@@ -16,6 +16,7 @@ import { NavbarService } from './../../shared/services/navbar.service';
 export class NavbarComponent implements OnInit {
   
   transparent$?: Subject<boolean>;
+  phoneMenu: boolean = false
 
   constructor(private navbarService: NavbarService) {}
 

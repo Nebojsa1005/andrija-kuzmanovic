@@ -46,7 +46,7 @@
   </div>
 
   <div class="block relative md:hidden">
-    <input type="checkbox" id="menu_checkbox" />
+    <input type="checkbox" [(ngModel)]="phoneMenu" id="menu_checkbox" />
     <label for="menu_checkbox">
       <div></div>
       <div></div>
@@ -54,3 +54,10 @@
     </label>
   </div>
 </nav>
+
+
+
+<div class="phone-menu flex flex-col items-center justify-center absolute w-screen h-screen opacity-90" [ngClass]="{'phone-menu-active': phoneMenu}">
+  <a class="phone-link" [ngClass]="{'phone-link-show': phoneMenu}" routerLink="./about">About</a>
+  <a class="phone-link" [ngClass]="{'phone-link-show': phoneMenu}" routerLink="./contact">Contact</a>
+</div>

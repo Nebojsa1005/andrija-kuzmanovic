@@ -18,7 +18,7 @@ export class TypeComponent implements OnInit {
   wantedProducts: any = [];
   innerWidth?: number
 
-  constructor(private dataService: DataService, private router: Router) {}
+  constructor(private dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;

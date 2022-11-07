@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 import { AboutModule } from './pages/about/about.module';
 import { NgModule } from '@angular/core';
@@ -21,6 +22,7 @@ import { AngularMaterialModule } from './angular-material.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     BrowserAnimationsModule,
     HomeModule,
     AboutModule,

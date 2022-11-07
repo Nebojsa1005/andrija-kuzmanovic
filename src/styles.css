@@ -10,7 +10,7 @@
     font-family: 'Carot Display' !important;
     font-size: 1.875rem;
     line-height: 2.25rem    ;
-    color: var(--darken-text);
+    color: white
 }
 
 :root {
@@ -33,6 +33,10 @@ body {
 
 body::-webkit-scrollbar {
     display: none;
+}
+
+.bg-color {
+    background-color: var(--primary-bg);
 }
 
 .title {
