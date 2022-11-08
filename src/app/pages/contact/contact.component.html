@@ -1,11 +1,17 @@
-<div class="px-36 wrapper">
-    <h1 class="title text-7xl my-24">Contact</h1>
+<div class="px-4 md:px-36 wrapper">
+
+    <h1 class="title text-5xl md:text-7xl my-8 md:my-24">Contact</h1>
    
     <div class="flex justify-between w-full">
         <ul>
-            <li class="my-8 flex" *ngFor="let item of contactInfo">
-                <img class="product-image w-9 h-auto mr-12" [src]="'../../../../../assets/contact/' + item.icon + '.png'">
-                <p>{{ item.data }}</p>
+            <li class="w-full my-8 flex" *ngFor="let item of contactInfo">
+                <img class="product-image w-9 h-auto mr-4 md:mr-12" [src]="'../../../../../assets/contact/' + item.icon + '.png'">
+                
+                <p *ngIf="item.type !== 'link'; else link">{{ item.data }}</p>
+
+                <ng-template #link>
+                    <a [href]="item.link" target="_blank" >{{ item.data }}</a>
+                </ng-template>
             </li>
         </ul>  
     </div>

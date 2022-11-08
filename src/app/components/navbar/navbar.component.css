@@ -86,25 +86,3 @@ label div:nth-child(2) {
   transform: rotateZ(-45deg);
 }
 
-
-/* phone menu */
-.phone-menu {
-  background: var(--primary-bg);
-  z-index: 100;
-  right: 100%;
-  transition: all 0.25s ease-in-out;
-}
-
-.phone-menu-active {
-  right: 0;
-}
-
-.phone-link {
-  opacity: 0;
-  transition: all 2.25s ease-in;
-}
-
-.phone-link-show {
-  opacity: 1;
-}
-

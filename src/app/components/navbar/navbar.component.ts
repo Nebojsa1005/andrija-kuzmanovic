@@ -4,7 +4,8 @@ import {
   HostListener,
   OnInit,
 } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Router } from '@angular/router';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { NavbarService } from './../../shared/services/navbar.service';
 
 @Component({
@@ -16,12 +17,15 @@ import { NavbarService } from './../../shared/services/navbar.service';
 export class NavbarComponent implements OnInit {
   
   transparent$?: Subject<boolean>;
-  phoneMenu: boolean = false
-
-  constructor(private navbarService: NavbarService) {}
-
-  ngOnInit(): void {
-    this.transparent$ = this.navbarService.transparent;
+  phoneMenu?: Subject<boolean>
+  
+  constructor(
+    private navbarService: NavbarService,
+  ) {}
+    
+    ngOnInit(): void {
+      this.transparent$ = this.navbarService.transparent;
+      this.phoneMenu = this.navbarService.phoneMenu
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -32,6 +36,9 @@ export class NavbarComponent implements OnInit {
     this.navbarService.transparent.value
       ? element.classList.add('navbar-inverse')
       : element.classList.remove('navbar-inverse');
+  }
 
+  togglePhoneMenu(event: any) {    
+    this.navbarService.phoneMenu.next(event)
   }
 }

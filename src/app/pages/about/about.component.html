@@ -1,15 +1,16 @@
-<div class="px-36">
+<div class="px-4 md:px-36">
 
-    <h1 class="title text-7xl my-24 font-bold">About</h1>
-
-    <p class="my-24">{{ introductionText }}</p>
+    <div class="my-8 md:my-24">
+        <h1 class="title text-5xl md:text-7xl my-8 md:my-24 font-bold">About</h1>
+        <p class="w-full text-justify md:text-start">{{ introductionText }}</p>
+    </div>
 
     <div>
-        <h3 class="section-title mb-24 font-bold">Work experience</h3>
-        <div class="flex items-start mb-24" *ngFor="let item of workExperience">
+        <h3 class="text-4xl md:text-5xl mb-24 font-bold">Work experience</h3>
+        <div class="flex items-start mb-8 md:mb-24" *ngFor="let item of workExperience">
             <img [src]="'../../../assets/about/' + item.companyName +'.png'">
             <div class="ml-12">
-                <h3 class="section-title mb-3 font-bold">{{ item.position }}</h3>
+                <h3 class="text-4xl md:text-5xl mb-3 font-bold">{{ item.position }}</h3>
                 <p class="mb-3">{{ item.companyName }} -{{ item.type }}</p>
                 <p class="dark-text mb-3">{{ item.time }}</p>
                 <ul>
@@ -20,11 +21,11 @@
     </div>
 
     <div>
-        <h3 class="section-title my-24 font-bold">Education</h3>
+        <h3 class="text-4xl md:text-5xl my-24 font-bold">Education</h3>
         <div class="flex items-start mb-24" *ngFor="let item of educations">
             <img [src]="'../../../assets/about/' + item.name +'.png'">
             <div class="ml-12">
-                <h3 class="section-title mb-3 font-bold">{{ item.name }}</h3>
+                <h3 class="text-4xl md:text-5xl mb-3 font-bold">{{ item.name }}</h3>
                 <p class="dark-text mb-3">{{ item.time }}</p>
             </div>
         </div>

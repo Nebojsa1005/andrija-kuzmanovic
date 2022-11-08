@@ -50,10 +50,6 @@ body::-webkit-scrollbar {
     padding-left: 9.375rem;
 }
 
-.section-title {
-    font-size: 3.125rem;
-}
-
 ul {
     margin: none;
 }
@@ -104,4 +100,8 @@ ul {
 /* mat icons */
 .mat-icon {
     font-family: 'Material Icons';
+}
+
+.z-200 {
+    z-index: 200;
 }
