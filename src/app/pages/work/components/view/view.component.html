@@ -1,20 +1,40 @@
-<div *ngIf="product" class="w-full my-24 px-36">
-    <h1 class="title text-7xl">{{ product.shortDescription }}</h1>
-    <h2 class="dark-text mb-12 text-4xl">{{ product.field }}</h2>
+<div *ngIf="product" class="w-full my-12 md:my-24 px-4 md:px-36">
+  <h1 class="title text-5xl mb-4 md:text-7xl">{{ product.shortDescription }}</h1>
+  <h2 class="dark-text mb-4 md:mb-12 text-2xl md:text-4xl">{{ product.field }}</h2>
 
-    <img class="product-image w-full mb-12"
-        [src]="'../../../../../assets/products/' + product.name + '/' + product.name + '.png'">
+  <img
+    loading="lazy"
+    class="product-image w-full mb-8 md:mb-12"
+    [src]="
+      '../../../../../assets/products/' +
+      product.name +
+      '/' +
+      product.name +
+      '.png'
+    "
+  />
 
-    <div class="flex overflow-hidden w-full gap-12 mb-12 justify-between items-center"
-        *ngFor="let group of product.sideImages">
-        <img class="product-image w-1/2" *ngFor="let image of group"
-            [src]="'../../../../../assets/products/' + product.name + '/' + image.name + '.png'">
-    </div>
+  <div
+    class="flex flex-col md:flex-row overflow-hidden w-full gap-8 md:gap-12 mb-8 md:mb-12 justify-between items-center"
+    *ngFor="let group of product.sideImages"
+  >
+    <img
+      loading="lazy"
+      class="product-image w-full md:w-1/2"
+      *ngFor="let image of group"
+      [src]="
+        '../../../../../assets/products/' +
+        product.name +
+        '/' +
+        image.name +
+        '.png'
+      "
+    />
+  </div>
 
-    <div class="w-full mt-24">
-        <p class="mb-12">{{ product.companyDescription }}</p>
-        <p class="mb-12 dark-text">Program Used: {{ product.program }}</p>
-        <p class="mb-12 dark-text">Visit the page</p>
-    </div>
-
+  <div class="w-full mt-12 md:mt-24">
+    <p class="mb-4 md:mb-12">{{ product.companyDescription }}</p>
+    <p class="mb-4 md:mb-12 dark-text">Program Used: {{ product.program }}</p>
+    <p class="mb-4 md:mb-12 dark-text">Visit the page</p>
+  </div>
 </div>

@@ -1,12 +1,12 @@
-<div class="w-full h-full min-h-screen min-w-screen bg-color relative">
-  <app-navbar></app-navbar>
+<ng-container *ngIf="{ phoneMenu: phoneMenu$ | async } as menu">
+  <div class="w-full h-full min-h-screen min-w-screen bg-color relative">
+    <app-navbar></app-navbar>
 
-  <div [ngClass]="{ fixed: phoneMenu$ | async }">
-    <router-outlet #o="outlet"></router-outlet>
-  </div>
-  <app-footer></app-footer>
+    <div [ngClass]="{ fixed: phoneMenu$ | async }">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+    <app-footer [ngClass]="{'hidden': menu.phoneMenu}"></app-footer>
 
-  <ng-container *ngIf="{ phoneMenu: phoneMenu$ | async } as menu">
     <div
       class="phone-menu flex flex-col items-center justify-center fixed w-screen h-screen opacity-90"
       [ngClass]="{ 'phone-menu-active': menu.phoneMenu }"
@@ -36,5 +36,5 @@
         Contact
       </button>
     </div>
-  </ng-container>
-</div>
+  </div>
+</ng-container>

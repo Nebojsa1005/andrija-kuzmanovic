@@ -45,9 +45,9 @@
     <a class="link" routerLinkActive="active" routerLink="contact">Contact</a>
   </div>
 
-  <div class="block relative md:hidden">
+  <div class="flex justify-center items-center h-full relative md:hidden">
     <input type="checkbox" [ngModel]="phoneMenu | async" (ngModelChange)="togglePhoneMenu($event)" id="menu_checkbox" />
-    <label class="z-200" for="menu_checkbox">
+    <label class="z-200 -mr-13" for="menu_checkbox">
       <div></div>
       <div></div>
       <div></div>

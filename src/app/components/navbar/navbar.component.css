@@ -21,13 +21,10 @@ a {
 }
 
 label {
-  position: absolute;
-  top: 50%;
   right: 0;
   display: block;
   width: 60px;
   height: 60px;
-  margin: -30px auto 0 auto;
   cursor: pointer;
   transform: scale(0.5);
 }
@@ -86,3 +83,6 @@ label div:nth-child(2) {
   transform: rotateZ(-45deg);
 }
 
+.-mr-13 {
+  margin-right: -13px
+}

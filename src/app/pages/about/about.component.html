@@ -8,7 +8,7 @@
     <div>
         <h3 class="text-4xl md:text-5xl mb-24 font-bold">Work experience</h3>
         <div class="flex items-start mb-8 md:mb-24" *ngFor="let item of workExperience">
-            <img [src]="'../../../assets/about/' + item.companyName +'.png'">
+            <img loading="lazy" [src]="'../../../assets/about/' + item.companyName +'.png'">
             <div class="ml-12">
                 <h3 class="text-4xl md:text-5xl mb-3 font-bold">{{ item.position }}</h3>
                 <p class="mb-3">{{ item.companyName }} -{{ item.type }}</p>
@@ -23,7 +23,7 @@
     <div>
         <h3 class="text-4xl md:text-5xl my-24 font-bold">Education</h3>
         <div class="flex items-start mb-24" *ngFor="let item of educations">
-            <img [src]="'../../../assets/about/' + item.name +'.png'">
+            <img loading="lazy" [src]="'../../../assets/about/' + item.name +'.png'">
             <div class="ml-12">
                 <h3 class="text-4xl md:text-5xl mb-3 font-bold">{{ item.name }}</h3>
                 <p class="dark-text mb-3">{{ item.time }}</p>
