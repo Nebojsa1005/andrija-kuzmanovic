@@ -2,39 +2,25 @@
   <div class="w-full h-full min-h-screen min-w-screen bg-color relative">
     <app-navbar></app-navbar>
 
-    <div [ngClass]="{ fixed: phoneMenu$ | async }">
-      <router-outlet #o="outlet"></router-outlet>
-    </div>
-    <app-footer [ngClass]="{'hidden': menu.phoneMenu}"></app-footer>
+  <router-outlet></router-outlet>
 
-    <div
-      class="phone-menu flex flex-col items-center justify-center fixed w-screen h-screen opacity-90"
-      [ngClass]="{ 'phone-menu-active': menu.phoneMenu }"
-    >
-      <button
-        (click)="phoneNavigation('work')"
-        class="phone-link"
-        [ngClass]="{ 'phone-link-show': menu.phoneMenu }"
-        routerLink="./work"
-      >
+  <app-footer></app-footer>
+
+  <ng-container *ngIf="{ phoneMenu: phoneMenu$ | async } as menu">
+    <div class="phone-menu flex flex-col items-center justify-center fixed w-screen h-screen opacity-90"
+      [ngClass]="{ 'phone-menu-active': menu.phoneMenu }">
+      <button (click)="phoneNavigation('work')" class="phone-link" [ngClass]="{ 'phone-link-show': menu.phoneMenu }"
+        routerLink="./work">
         Work
       </button>
-      <button
-        (click)="phoneNavigation('about')"
-        class="phone-link"
-        [ngClass]="{ 'phone-link-show': menu.phoneMenu }"
-        routerLink="./about"
-      >
+      <button (click)="phoneNavigation('about')" class="phone-link" [ngClass]="{ 'phone-link-show': menu.phoneMenu }"
+        routerLink="./about">
         About
       </button>
-      <button
-        (click)="phoneNavigation('contact')"
-        class="phone-link"
-        [ngClass]="{ 'phone-link-show': menu.phoneMenu }"
-        routerLink="./contact"
-      >
+      <button (click)="phoneNavigation('contact')" class="phone-link" [ngClass]="{ 'phone-link-show': menu.phoneMenu }"
+        routerLink="./contact">
         Contact
       </button>
     </div>
-  </div>
-</ng-container>
+  </ng-container>
+</div>

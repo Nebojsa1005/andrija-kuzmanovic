@@ -1,10 +1,18 @@
-import { SideImage, Product } from '../../pages/home/models/products';
+import { Product } from '../../pages/home/models/products';
 import { Injectable } from '@angular/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
+
+  userData: any = {
+    socialMediaLinks: [
+      { name: 'Instagram', link: 'https://www.instagram.com/kuzmanovicaa/' },
+      { name: 'Facebook', link: 'https://www.facebook.com/wcsola/' },
+      { name: 'LinkedIn', link: 'https://www.linkedin.com/in/andrijakuzmanovic/' }
+    ]
+  }
 
   productList: Product[] = [
     {
@@ -274,8 +282,6 @@ export class DataService {
       isBigger: true
     }
   ]
-
-  constructor() { }
 
   getProduct(name: string) {
     return this.productList.filter(( product: Product ) => product.name === name)[0]

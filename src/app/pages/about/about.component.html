@@ -7,12 +7,12 @@
 
     <div>
         <h3 class="text-4xl md:text-5xl mb-24 font-bold">Work experience</h3>
-        <div class="flex items-start mb-8 md:mb-24" *ngFor="let item of workExperience">
-            <img loading="lazy" [src]="'../../../assets/about/' + item.companyName +'.png'">
-            <div class="ml-12">
-                <h3 class="text-4xl md:text-5xl mb-3 font-bold">{{ item.position }}</h3>
-                <p class="mb-3">{{ item.companyName }} -{{ item.type }}</p>
-                <p class="dark-text mb-3">{{ item.time }}</p>
+        <div class="flex flex-col md:flex-row items-center md:items-start mb-8 md:mb-24" *ngFor="let item of workExperience">
+            <img class="mb-4 md:mb-0" [src]="'../../../assets/about/' + item.companyName +'.png'">
+            <div class="md:ml-12">
+                <h3 class="text-4xl md:text-5xl mb-2 md:mb-3 font-bold">{{ item.position }}</h3>
+                <p class="mb-2 md:mb-3">{{ item.companyName }} -{{ item.type }}</p>
+                <p class="dark-text mb-2 md:mb-3">{{ item.time }}</p>
                 <ul>
                     <li *ngFor="let task of item.tasks">{{ task }}</li>
                 </ul>
@@ -21,12 +21,12 @@
     </div>
 
     <div>
-        <h3 class="text-4xl md:text-5xl my-24 font-bold">Education</h3>
-        <div class="flex items-start mb-24" *ngFor="let item of educations">
-            <img loading="lazy" [src]="'../../../assets/about/' + item.name +'.png'">
-            <div class="ml-12">
-                <h3 class="text-4xl md:text-5xl mb-3 font-bold">{{ item.name }}</h3>
-                <p class="dark-text mb-3">{{ item.time }}</p>
+        <h3 class="text-4xl md:text-5xl text-center md:text-left my-12 md:my-24 font-bold">Education</h3>
+        <div class="flex flex-col md:flex-row items-center md:items-start mb-12 md:mb-24" *ngFor="let item of educations">
+            <img class="mb-4 md:mb-0" [src]="'../../../assets/about/' + item.name +'.png'">
+            <div class="md:ml-12 text-center md:text-left">
+                <h3 class="text-4xl md:text-5xl mb-2 md:mb-3 font-bold">{{ item.name }}</h3>
+                <p class="dark-text mb-2 md:mb-3">{{ item.time }}</p>
             </div>
         </div>
     </div>

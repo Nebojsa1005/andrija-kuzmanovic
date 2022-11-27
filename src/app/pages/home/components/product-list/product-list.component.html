@@ -1,9 +1,9 @@
 <ul class="w-full">
-    <li class="image-shadow-wrapper max-h-full w-full overflow-hidden flex justify-center items-center" (click)="viewProduct(product.name)"
-        *ngFor="let product of productList">
+    <li class="image-shadow-wrapper max-h-full w-full overflow-hidden flex justify-center items-center"
+        (click)="viewProduct(product.name)" *ngFor="let product of productList">
 
         <p [id]="product.title" class="description absolute">{{ product.shortDescription }}</p>
-        <img loading="lazy" [id]="product.name" class="product-image w-full" (mousemove)="onElement(product.title, $event)"
-        [src]="'../../../../../assets/products/' + product.name + '/' + product.name + '.png'">
+        <img [id]="product.name" class="product-image w-full" (mousemove)="onElement(product.title, $event)"
+            [src]="'../../../../../assets/products/' + product.name + '/' + product.name + '.png'">
     </li>
 </ul>
