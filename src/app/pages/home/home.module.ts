@@ -1,3 +1,4 @@
+import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'ng-carousel-cdk';
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     CarouselModule,
     MatToolbarModule,
     HomeRoutingModule,
-    NgbModule
+    NgbModule,
+    MatButtonModule
   ]
 })
 export class HomeModule { }

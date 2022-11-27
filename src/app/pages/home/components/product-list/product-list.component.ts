@@ -26,4 +26,13 @@ export class ProductListComponent {
   viewProduct(imageName: string) {
     this.router.navigate(['work', 'view', imageName] )
   }
+  viewProductMobile(imageName: string, element: Element) {
+    if (element.classList.contains('description')) {
+      this.router.navigate(['work', 'view', imageName] )
+    }
+  }
+
+  showDescription(element: Element) {
+    element.classList.add('description')
+  }
 }

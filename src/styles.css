@@ -74,15 +74,19 @@ ul {
     transition: all 0.25s ease-in-out;
 }
 
-.image-shadow-wrapper:hover .product-image {
+.image-shadow-wrapper:hover .product-image,
+.image-shadow-wrapper:active .product-image {
     background-color: black;
     opacity: 0.3;
     transform: scale(1.1);
 }
 
-.image-shadow-wrapper:hover .description {
-    /* display: inline-block; */
+.image-shadow-wrapper:hover .description,
+.image-shadow-wrapper:active .description {
     opacity: 1;
+    display: flex;
+    pointer-events: all;
+
 }
 
 .product-image {
@@ -90,11 +94,11 @@ ul {
 }
 
 .description {
-    /* display: none; */
     opacity: 0;
     z-index: 1000;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     transition: all 0.25s ease-in-out;
+    pointer-events: none;
 }
 
 /* mat icons */

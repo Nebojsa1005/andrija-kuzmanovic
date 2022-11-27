@@ -20,7 +20,6 @@ export class ViewComponent implements OnInit {
   ngOnInit(): void {
     const productName = this.route.snapshot.params['productName']
     this.product = this.dataService.getProduct(productName)
-    console.log(this.product);
   }
 
 }

@@ -1,9 +1,24 @@
 <ul class="w-full">
-    <li class="image-shadow-wrapper max-h-full w-full overflow-hidden flex justify-center items-center"
+    <li class="hidden md:flex justify-center items-center image-shadow-wrapper max-h-full w-full overflow-hidden"
         (click)="viewProduct(product.name)" *ngFor="let product of productList">
 
         <p [id]="product.title" class="description absolute">{{ product.shortDescription }}</p>
-        <img [id]="product.name" class="product-image w-full" (mousemove)="onElement(product.title, $event)"
+        <img loading="lazy" [id]="product.name" class="product-image w-full"
+            (mousemove)="onElement(product.title, $event)"
+            [src]="'../../../../../assets/products/' + product.name + '/' + product.name + '.png'">
+    </li>
+    <!-- Mobile -->
+    <li class="md:hidden justify-center items-center image-shadow-wrapper max-h-full w-full overflow-hidden relative"
+        (click)="showDescription(description)" *ngFor="let product of productList">
+
+        <div #description class="w-full h-full hidden absolute flex flex-col py-8 items-center justify-center">
+            <p class="mb-12">{{ product.shortDescription }}</p>
+            <button mat-stroked-button class="text-base" (click)="viewProductMobile(product.name, description)">Read
+                More</button>
+        </div>
+
+        <img loading="lazy" [id]="product.name" class="product-image w-full"
+            (mousemove)="onElement(product.title, $event)"
             [src]="'../../../../../assets/products/' + product.name + '/' + product.name + '.png'">
     </li>
 </ul>

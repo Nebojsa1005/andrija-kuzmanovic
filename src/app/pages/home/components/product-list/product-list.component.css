@@ -1,3 +1,5 @@
-.description { 
-    transform: translate(-50%, -50%);
+.show-description {
+    background-color: black;
+    opacity: 0.3;
+    transform: scale(1.1);
 }
