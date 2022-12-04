@@ -30,10 +30,10 @@ export class TypeOfWorkComponent implements OnInit {
   }
 
   mapOrder(types: string[]): string[] {
-    const order: string[] = ['UX / UI design', 'Digital Design', 'Brand Identity', 'Packaging', 'Social Media']
-
+    const order: string[] = ['UX / UI design', 'Digital Design', 'Branding', 'Packaging', 'Social Media']
     types.sort((a: string, b: string) => order.indexOf(a) - order.indexOf(b));
-
+    console.log(types);
+    
     return types;
   };
 
