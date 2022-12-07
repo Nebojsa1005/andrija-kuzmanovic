@@ -1,5 +1,5 @@
 
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CarouselConfig, CarouselWidthMode } from 'ng-carousel-cdk';
 import { NavbarService } from 'src/app/shared/services/navbar.service';
@@ -11,18 +11,31 @@ import { CarouselItem } from '../../models/products';
   templateUrl: './carousel.component.html',
   styleUrls: ['./carousel.component.css'],
 })
-export class CarouselComponent implements OnInit {
+export class CarouselComponent implements OnInit, OnDestroy {
 
   @Input() carouselImages: CarouselItem[] = []
 
   config: CarouselConfig<CarouselItem> = {}
-
   configForm: FormGroup = {} as FormGroup
-
   itemIndex = 0;
   maxWidth = 0;
+
   readonly MAX_WIDTH_PERCENTS = 110;
   readonly MAX_WIDTH_PIXELS = 1000;
+
+  _imageSrc!: string
+
+  get imageSrc(): any {
+    return this._imageSrc
+  }
+
+  set imageSrc(productName: string) {
+    console.log(window.screen.width);
+    const base = '../../../../../assets/products/'
+    const productSrc = base + productName + '/' + productName 
+    
+   this.imageSrc = window.screen.width <= 640 ? productSrc + 'h-lg.png' : productSrc + '.png'
+  }
 
   constructor(
     private navbarService: NavbarService
@@ -33,10 +46,6 @@ export class CarouselComponent implements OnInit {
     
     this.navbarService.transparent.next(true)
     this.maxWidth = this.getMaxWidth(this.config.widthMode);
-  }
-
-  ngOnDestroy() {
-    this.navbarService.transparent.next(false)
   }
 
   setItemIndex(newIndex: number): void {
@@ -75,4 +84,19 @@ export class CarouselComponent implements OnInit {
       allowKeyboardNavigation: new FormControl(this.config.allowKeyboardNavigation),
     });
   }
+
+  isMobile!: boolean
+  getImageSrc(productName: string): string {
+    this.isMobile = window.screen.width <= 640 ? true : false
+    
+    const base = '../../../../../assets/products/'
+    const productSrc = base + productName + '/' + productName 
+    
+   return window.screen.width <= 640 ? productSrc + '-h-lg.png' : productSrc + '.png'
+  }
+
+  ngOnDestroy() {
+    this.navbarService.transparent.next(false)
+  }
+
 }
