@@ -15,12 +15,11 @@ export class HomeComponent {
   productList?: Product[]
   carouselImages: CarouselItem[] = [
     { name: 'caffe-d-italia-social-media' },
-    { name: 'ducati-genova' },
+    { name: 'ducati-genova-webpage' },
     { name: 'oshee-social-media' },
     { name: 'insel-sleep' }
   ]
   
-
   constructor( private dataService: DataService ) {
     this.productList = this.dataService.productList
     this.productList = this.productList?.filter((product: Product) => this.order.indexOf(product.name) >= 0)

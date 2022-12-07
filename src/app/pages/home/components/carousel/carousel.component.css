@@ -7,7 +7,8 @@
     /* overflow: hidden !important; */
 }
 
-.carousel-block {
+::ng-deep .ng-carousel-block {
+    height: 100vh !important;
 }
 
 .bullet-button {
