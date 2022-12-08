@@ -9,7 +9,6 @@ import { HomeComponent } from './home.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { ProductListComponent } from './components/product-list/product-list.component';
-import { NgbCarouselComponent } from './components/ngb-carousel/ngb-carousel.component';
 import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 import { FormsModule } from '@angular/forms';
 
@@ -19,7 +18,6 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     CarouselComponent,
     ProductListComponent,
-    NgbCarouselComponent
   ],
   imports: [
     FormsModule,
@@ -31,4 +29,4 @@ import { FormsModule } from '@angular/forms';
     MatButtonModule
   ]
 })
-export class HomeModule { }
+export class HomeModule {}

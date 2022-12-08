@@ -1,12 +1,17 @@
 import { Product } from '../../pages/home/models/products';
 import { Injectable } from '@angular/core';
 
+export interface UserData {
+  socialMediaLinks: {name: string, link: string}[]
+}
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class DataService {
 
-  userData: any = {
+  userData: UserData = {
     socialMediaLinks: [
       { name: 'Instagram', link: 'https://www.instagram.com/kuzmanovicaa/' },
       { name: 'Facebook', link: 'https://www.facebook.com/wcsola/' },

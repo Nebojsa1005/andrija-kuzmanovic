@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../../models/products';
 
@@ -6,33 +6,31 @@ import { Product } from '../../models/products';
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-
 export class ProductListComponent {
+  @Input() productList?: Product[] = [];
 
-  @Input() productList?: Product[] = []
-
-  
-  constructor( private router: Router ) {}
+  constructor(private router: Router) {}
 
   onElement(text: string, e: any) {
-    const description: any = document.getElementById(text);
+    const description: HTMLElement | null = document.getElementById(text)    
 
-      description.style.left =( e.pageX ) + 'px';
-      description.style.top = ( e.pageY + -30) + 'px';
+    description!.style.left = e.pageX + 'px';
+    description!.style.top = e.pageY + -30 + 'px';
   }
 
   viewProduct(imageName: string) {
-    this.router.navigate(['work', 'view', imageName] )
+    this.router.navigate(['work', 'view', imageName]);
   }
+
   viewProductMobile(imageName: string, element: Element) {
-    if (element.classList.contains('description')) {
-      this.router.navigate(['work', 'view', imageName] )
-    }
+    if (!element.classList.contains('description')) return;
+
+    this.router.navigate(['work', 'view', imageName]);
   }
 
   showDescription(element: Element) {
-    element.classList.add('description')
+    element.classList.add('description');
   }
 }

@@ -1,10 +1,8 @@
-
 import { Component, Input, OnInit, OnDestroy } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CarouselConfig, CarouselWidthMode } from 'ng-carousel-cdk';
 import { NavbarService } from 'src/app/shared/services/navbar.service';
 import { CarouselItem } from '../../models/products';
-
 
 @Component({
   selector: 'app-carousel',
@@ -12,39 +10,25 @@ import { CarouselItem } from '../../models/products';
   styleUrls: ['./carousel.component.css'],
 })
 export class CarouselComponent implements OnInit, OnDestroy {
+  @Input() carouselImages: CarouselItem[] = [];
 
-  @Input() carouselImages: CarouselItem[] = []
-
-  config: CarouselConfig<CarouselItem> = {}
-  configForm: FormGroup = {} as FormGroup
+  config: CarouselConfig<CarouselItem> = {};
+  configForm: FormGroup = {} as FormGroup;
   itemIndex = 0;
   maxWidth = 0;
+  isMobile!: boolean
 
   readonly MAX_WIDTH_PERCENTS = 110;
   readonly MAX_WIDTH_PIXELS = 1000;
 
-  _imageSrc!: string
-
-  get imageSrc(): any {
-    return this._imageSrc
+  constructor(private navbarService: NavbarService) {
+    this.isMobile = window.screen.width <= 640
   }
-
-  set imageSrc(productName: string) {
-    console.log(window.screen.width);
-    const base = '../../../../../assets/products/'
-    const productSrc = base + productName + '/' + productName 
-    
-   this.imageSrc = window.screen.width <= 640 ? productSrc + 'h-lg.png' : productSrc + '.png'
-  }
-
-  constructor(
-    private navbarService: NavbarService
-  ) { }
 
   ngOnInit() {
-    this.initializeCarousel()
-    
-    this.navbarService.transparent.next(true)
+    this.initializeCarousel();
+
+    this.navbarService.transparent.next(true);
     this.maxWidth = this.getMaxWidth(this.config.widthMode);
   }
 
@@ -53,7 +37,9 @@ export class CarouselComponent implements OnInit, OnDestroy {
   }
 
   getMaxWidth(mode?: CarouselWidthMode): number {
-    return mode === CarouselWidthMode.PERCENT ? this.MAX_WIDTH_PERCENTS : this.MAX_WIDTH_PIXELS;
+    return mode === CarouselWidthMode.PERCENT
+      ? this.MAX_WIDTH_PERCENTS
+      : this.MAX_WIDTH_PIXELS;
   }
 
   initializeCarousel() {
@@ -63,7 +49,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
       autoplayDelay: 2000,
       shouldLoop: true,
       items: this.carouselImages,
-      autoplayEnabled: true,
+      autoplayEnabled: false,
       dragEnabled: true,
       shouldRecalculateOnResize: true,
       recalculateDebounce: 300,
@@ -79,24 +65,25 @@ export class CarouselComponent implements OnInit, OnDestroy {
       slidesQuantity: new FormControl((this.config?.items ?? []).length),
       autoplayEnabled: new FormControl(this.config.autoplayEnabled),
       dragEnabled: new FormControl(this.config.dragEnabled),
-      shouldRecalculateOnResize: new FormControl(this.config.shouldRecalculateOnResize),
+      shouldRecalculateOnResize: new FormControl(
+        this.config.shouldRecalculateOnResize
+      ),
       recalculateDebounce: new FormControl(this.config.recalculateDebounce),
-      allowKeyboardNavigation: new FormControl(this.config.allowKeyboardNavigation),
+      allowKeyboardNavigation: new FormControl(
+        this.config.allowKeyboardNavigation
+      ),
     });
   }
 
-  isMobile!: boolean
   getImageSrc(productName: string): string {
-    this.isMobile = window.screen.width <= 640 ? true : false
-    
-    const base = '../../../../../assets/products/'
-    const productSrc = base + productName + '/' + productName 
-    
-   return window.screen.width <= 640 ? productSrc + '-h-lg.png' : productSrc + '.png'
+    let isMobile = window.screen.width <= 640 ? true : false;
+    const base = '../../../../../assets/products/';
+    const productSrc = base + productName + '/' + productName;
+
+    return isMobile ? productSrc + '-h-lg.png' : productSrc + '.png';
   }
 
   ngOnDestroy() {
-    this.navbarService.transparent.next(false)
+    this.navbarService.transparent.next(false);
   }
-
 }

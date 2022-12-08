@@ -13,6 +13,7 @@ export class TypeOfWorkComponent implements OnInit {
   productList?: Product[]
   types: string[] = []
   orderedTypes: string[] = []
+  order: string[] = ['UX / UI design', 'Digital Design', 'Branding', 'Packaging', 'Social Media']
 
   constructor(private dataService: DataService) { }
 
@@ -27,6 +28,8 @@ export class TypeOfWorkComponent implements OnInit {
       if (this.types.indexOf(product.typeOfWork) !== -1) return
       this.types.push(product.typeOfWork)
     })
+    console.log(this.types);
+    
   }
 
   mapOrder(types: string[]): string[] {

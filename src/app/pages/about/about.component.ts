@@ -1,11 +1,12 @@
 import { Education, WorkExperience } from './models/work-experience';
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { AboutService } from './services/about.service';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AboutComponent {
 

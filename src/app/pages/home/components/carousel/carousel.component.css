@@ -1,18 +1,14 @@
 .active {
-    background-color: white !important;
-    transform: rotate(45deg);
+  background-color: white !important;
+  transform: rotate(45deg);
 }
 
 .carouse-slide {
-    /* overflow: hidden !important; */
-}
-
-::ng-deep .ng-carousel-block {
-    height: 100vh !important;
+  /* overflow: hidden !important; */
 }
 
 .bullet-button {
-    background-color: #929292;
-    border-radius: 2px;
-    transition: all 0.25s ease-in-out;
+  background-color: #929292;
+  border-radius: 2px;
+  transition: all 0.25s ease-in-out;
 }

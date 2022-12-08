@@ -3,3 +3,13 @@
     opacity: 0.3;
     transform: scale(1.1);
 }
+
+@media (max-width: 640px) {
+    .image-shadow-wrapper {
+        height: 20rem;
+    }
+
+    .product-image {
+        height: 100%
+    }
+}

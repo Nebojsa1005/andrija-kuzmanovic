@@ -1,4 +1,4 @@
-<div class="h-[35vh] md:h-screen relative">
+<div class="h-screen relative">
     <ng-carousel
         #carouselRef="ngCarousel"
         [config]="config"
@@ -9,8 +9,7 @@
             let-item
             let-active="isActive">
             <div class="carousel-slide grabbable h-full w-auto">
-                <img [ngClass]="{'h-full': isMobile, 'w-full': !isMobile}" class="h-full" [src]="getImageSrc(item.name)">
-                <!-- <img class="h-full" [src]="'../../../../../assets/products/' + item.name + '/' + item.name + '-h-lg.png'"> -->
+                <img [ngClass]="{'h-full': isMobile, 'w-full': !isMobile}" [src]="getImageSrc(item.name)">
             </div>
         </ng-template>
     </ng-carousel>

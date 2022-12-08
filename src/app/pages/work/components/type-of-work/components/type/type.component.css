@@ -1,4 +1,4 @@
-::ng-deep .carousel-engine {
+.height {
     height: 20rem !important;
     overflow: hidden !important;
 }
@@ -14,7 +14,7 @@
 .grabbable:active {
     cursor: grabbing;
 }
-
-::ng-deep .carousel-block li:last-child .carousel-slide {
+/* 
+::ng-deep .type-of-work-carousel li:last-child .carousel-slide {
     margin-right: 0;
-}
+} */

@@ -12,6 +12,7 @@ import { CarouselItem, Product, ProductListItem } from './models/products';
 export class HomeComponent {
 
   order = ['dasigo', 'oshee-energy-drink', 'proteo-fit-chocolate-bar-white', 'vintage-fest', 'stara-rakija-billboard', 'immunity-chef']
+
   productList?: Product[]
   carouselImages: CarouselItem[] = [
     { name: 'caffe-d-italia-social-media' },
@@ -25,4 +26,5 @@ export class HomeComponent {
     this.productList = this.productList?.filter((product: Product) => this.order.indexOf(product.name) >= 0)
     this.productList.sort((a: Product, b: Product) => this.order.indexOf(a.name) - this.order.indexOf(b.name));
   }
+  
 }

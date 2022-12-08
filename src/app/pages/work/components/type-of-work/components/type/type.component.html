@@ -1,12 +1,12 @@
-<div class="relative overflow-hidden">
-    <h1 class="md:mb-12 mb-4 md:px-36 px-4 md:text-5xl text-3xl">{{ type }}</h1>
-    <ng-carousel #carouselRef="ngCarousel" [config]="config" class="carousel-block">
+<h1 class="md:mb-12 mb-4 md:px-36 px-4 md:text-5xl text-3xl">{{ type }}</h1>
+<div class="relative height overflow-hidden">
+    <ng-carousel #carouselRef="ngCarousel" [config]="config" class="carousel-block type-of-work-carousel">
         <ng-template [ngCarouselSlide]="carouselRef" let-item>
             <div class="carousel-slide grabbable md:mr-12 mr-4 image-shadow-wrapper items-center justify-center overflow-hidden flex h-full relative"
                 (click)="viewProduct(item.name)" ngCarouselPreventGhostClick>
                 <p [id]="item.shortDescription" class="description absolute flex w-full justify-center items-center">{{
                     item.shortDescription }}</p>
-                <img class="product-image"
+                <img class="product-image h-full"
                     [src]="'../../../../../assets/products/' + item.name + '/' + item.name + '.png'" [alt]="item.name">
             </div>
         </ng-template>

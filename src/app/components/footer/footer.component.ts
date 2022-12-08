@@ -1,4 +1,4 @@
-import { DataService } from './../../shared/services/data.service';
+import { DataService, UserData } from './../../shared/services/data.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,10 +8,9 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
-  userData: any
+  userData: UserData
 
   constructor(private dataService: DataService) { 
     this.userData = this.dataService.userData
   }
-
 }

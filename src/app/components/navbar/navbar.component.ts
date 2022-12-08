@@ -1,11 +1,9 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  HostListener,
-  OnInit,
+  HostListener
 } from '@angular/core';
-import { Router } from '@angular/router';
-import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { Subject } from 'rxjs';
 import { NavbarService } from './../../shared/services/navbar.service';
 
 @Component({
@@ -14,18 +12,13 @@ import { NavbarService } from './../../shared/services/navbar.service';
   styleUrls: ['./navbar.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class NavbarComponent implements OnInit {
-  
+export class NavbarComponent {
   transparent$?: Subject<boolean>;
-  phoneMenu?: Subject<boolean>
-  
-  constructor(
-    private navbarService: NavbarService,
-  ) {}
-    
-    ngOnInit(): void {
-      this.transparent$ = this.navbarService.transparent;
-      this.phoneMenu = this.navbarService.phoneMenu
+  phoneMenu?: Subject<boolean>;
+
+  constructor(private navbarService: NavbarService) {
+    this.transparent$ = this.navbarService.transparent;
+    this.phoneMenu = this.navbarService.phoneMenu;
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -38,7 +31,7 @@ export class NavbarComponent implements OnInit {
       : element.classList.remove('navbar-inverse');
   }
 
-  togglePhoneMenu(event: any) {    
-    this.navbarService.phoneMenu.next(event)
+  togglePhoneMenu(event: any) {
+    this.navbarService.phoneMenu.next(event);
   }
 }
