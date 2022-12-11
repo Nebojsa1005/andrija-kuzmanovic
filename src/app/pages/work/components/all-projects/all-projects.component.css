@@ -1,6 +1,17 @@
 .height {
-    /* treba da bude 50rem ali se sjebe par slika */
-    height: 25rem; 
+    height: 25rem;
+}
+
+@media (min-width: 2560px) {
+    .height {
+        height: 30rem;
+    }
+}
+
+@media (max-height: 450px) and (max-width: 1200px) {
+    .height {
+        height: 30rem;
+    }
 }
 
 .bigger {
@@ -10,4 +21,3 @@
 .smaller {
     width: 45%
 }
-

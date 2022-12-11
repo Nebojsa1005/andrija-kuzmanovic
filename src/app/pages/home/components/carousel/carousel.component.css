@@ -3,8 +3,10 @@
   transform: rotate(45deg);
 }
 
-.carouse-slide {
-  /* overflow: hidden !important; */
+@media (min-width: 1560px) {
+  .carousel-wrapper {
+    height: auto;
+  }  
 }
 
 .bullet-button {

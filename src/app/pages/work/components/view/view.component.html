@@ -1,7 +1,7 @@
 <div *ngIf="product" class="w-full my-12 md:my-24 px-4 md:px-36">
     <div class="w-full text-center md:text-left">
         <h1 class="title text-4xl md:text-7xl">{{ product.shortDescription }}</h1>
-        <h2 class="dark-text mb-12 text-3xl md:text-4xl">{{ product.field }}</h2>
+        <h2 class="dark-text mb-12 text-2xl md:text-4xl">{{ product.field }}</h2>
 
     </div>
 
@@ -15,12 +15,12 @@
     </div>
 
     <div class="w-full mt-12 md:mt-24">
-        <p class="mb-4 md:mb-12">{{ product.companyDescription }}</p>
-        <p class="mb-4 md:mb-12 dark-text">Program Used: {{ product.program }}</p>
-        <a *ngIf="product.link; else noLink" [href]="product.link" target="_blank" class="cursro-pointer mb-4 md:mb-12 dark-text">Visit the page</a>
+        <p class="mb-4 md:mb-12 text-2xl md:text-3xl">{{ product.companyDescription }}</p>
+        <p class="mb-4 md:mb-12 dark-text  text-2xl md:text-3xl">Program Used: {{ product.program }}</p>
+        <a *ngIf="product.link; else noLink" [href]="product.link" target="_blank" class="cursro-pointer mb-4 md:mb-12 dark-text  text-2xl md:text-3xl">Visit the page</a>
         
         <ng-template #noLink>
-            <p class="mb-4 md:mb-12 dark-text">No link to the site</p>
+            <p class="mb-4 md:mb-12 dark-text  text-2xl md:text-3xl">No link to the site</p>
         </ng-template>
     </div>
 

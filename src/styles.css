@@ -9,7 +9,7 @@
     box-sizing: border-box;
     font-family: 'Carot Display' !important;
     font-size: 1.875rem;
-    line-height: 2.25rem    ;
+    line-height: 2.25rem;
     color: white
 }
 
@@ -41,8 +41,6 @@ body::-webkit-scrollbar {
 
 .title {
     font-weight: 700 !important;
-    /* font-size: 5rem !important; */
-    /* line-height: 6rem !important; */
 }
 
 .px-36 {
@@ -108,4 +106,10 @@ ul {
 
 .z-200 {
     z-index: 200;
+}
+
+@media (min-width: 1560px) {
+    .application-wrapper {
+        padding: 0 15% !important;
+    }
 }

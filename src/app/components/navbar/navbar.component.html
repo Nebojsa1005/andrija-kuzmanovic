@@ -1,20 +1,12 @@
-<nav
-  class="navbar w-full px-8 md:px-36 py-2 md:py-8 flex justify-between items-center"
-  [ngClass]="{ transparent: transparent$ | async }"
-  (scroll)="onWindowScroll()"
->
+<nav class="navbar w-full px-8 md:px-36 py-2 md:py-8 flex justify-between items-center"
+  [ngClass]="{ transparent: transparent$ | async }" (scroll)="onWindowScroll()">
   <a routerLink="" class="link active w-12 z-200">
     <img class="h-12" src="../../../assets/logo/logo.png">
   </a>
 
   <div class="hidden md:block">
-    <a
-      class="mr-6 link"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: false }"
-      routerLink="work"
-      >Work</a
-    >
+    <a class="mr-6 link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }"
+      routerLink="work">Work</a>
     <a class="mr-6 link" routerLinkActive="active" routerLink="about">About</a>
     <a class="link" routerLinkActive="active" routerLink="contact">Contact</a>
   </div>

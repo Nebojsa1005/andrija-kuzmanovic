@@ -12,9 +12,10 @@
         (click)="showDescription(description)" *ngFor="let product of productList">
 
         <div #description class="w-full h-full hidden absolute flex flex-col py-8 items-center justify-center">
-            <p class="mb-12 px-4 text-center w-full">{{ product.shortDescription }}</p>
-            <button mat-stroked-button class="text-base" (click)="viewProductMobile(product.name, description)">Read
-                More</button>
+            <p class="mb-12 px-4 text-center text-2xl w-auto">{{ product.shortDescription }}</p>
+            <button mat-stroked-button (click)="viewProductMobile(product.name, description)">
+                <span class="text-xl">Read More</span>
+            </button>
         </div>
 
         <img loading="lazy" [id]="product.name" class="product-image w-full"

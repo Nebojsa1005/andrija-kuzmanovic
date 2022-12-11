@@ -27,17 +27,11 @@ export class TypeOfWorkComponent implements OnInit {
     this.productList?.forEach((product: Product) => {
       if (this.types.indexOf(product.typeOfWork) !== -1) return
       this.types.push(product.typeOfWork)
-    })
-    console.log(this.types);
-    
+    })    
   }
 
   mapOrder(types: string[]): string[] {
-    const order: string[] = ['UX / UI design', 'Digital Design', 'Branding', 'Packaging', 'Social Media']
-    types.sort((a: string, b: string) => order.indexOf(a) - order.indexOf(b));
-    console.log(types);
-    
-    return types;
+    return types.sort((a: string, b: string) => this.order.indexOf(a) - this.order.indexOf(b));    
   };
 
 }

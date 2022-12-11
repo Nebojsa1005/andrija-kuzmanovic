@@ -1,7 +1,7 @@
 <div class="w-full">
-    <div class="flex md:flex-row flex-col height overflow-hidden items-center justify-between  gap-4 md:gap-8 mb-4 md:mb-8"
+    <div class="flex md:flex-row flex-col height overflow-hidden items-center justify-between gap-4 md:gap-8 mb-4 md:mb-8"
         *ngFor="let group of wantedProductList; let index = index; trackBy:identify">
-        
+
         <a [routerLink]="['../', 'view', image.name]" *ngFor="let image of group; let index = index;  trackBy:identify"
             class="hidden md:flex image-shadow-wrapper items-center justify-center overflow-hidden flex h-full w-full relative"
             [ngClass]="{'bigger': image.isBigger, 'smaller': !image.isBigger}">

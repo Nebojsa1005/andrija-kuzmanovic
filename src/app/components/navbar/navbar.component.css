@@ -8,12 +8,12 @@
 }
 
 .navbar-inverse {
-  background-color: #161616 !important;
+  background-color: var(--primary-bg) !important;
 }
 
 nav,
 a {
-  transition: all 0.25s ease-in-out;
+  transition: background 0.25s ease-in-out;
 }
 
 #menu_checkbox {
@@ -85,4 +85,11 @@ label div:nth-child(2) {
 
 .-mr-13 {
   margin-right: -13px
+}
+
+@media (min-width: 1560px) {
+  .transparent {
+    padding-left: 20%;
+    padding-right: 20%;
+  }
 }

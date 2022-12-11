@@ -4,7 +4,7 @@
   <div class="flex justify-between w-full">
     <ul>
       <li
-        class="w-full my-6 md:my-8 flex items-center text-base"
+        class="w-full my-6 md:my-8 flex items-center"
         *ngFor="let item of contactInfo"
       >
         <img
@@ -12,13 +12,13 @@
           [src]="'../../../../../assets/contact/' + item.icon + '.png'"
         />
 
-        <p *ngIf="item.type === 'text'">{{ item.data }}</p>
+        <p *ngIf="item.type === 'text'" class="text-2xl md:text-3xl">{{ item.data }}</p>
 
-        <a [href]="item.link" *ngIf="item.type === 'link'" target="_blank">{{
+        <a [href]="item.link" *ngIf="item.type === 'link'" target="_blank" class="text-2xl md:text-3xl">{{
           item.data
         }}</a>
 
-        <a *ngIf="item.type === 'email'" [href]="'mailto:' + item.link" target="_blank">{{
+        <a *ngIf="item.type === 'email'" [href]="'mailto:' + item.link" target="_blank" class="text-2xl md:text-3xl">{{
           item.data
         }}</a>
       </li>

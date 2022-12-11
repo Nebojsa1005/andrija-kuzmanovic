@@ -16,8 +16,8 @@ export class ProductListComponent {
   onElement(text: string, e: any) {
     const description: HTMLElement | null = document.getElementById(text)    
 
-    description!.style.left = e.pageX + 'px';
-    description!.style.top = e.pageY + -30 + 'px';
+    description!.style.left = e.pageX - (description!.offsetWidth / 2) + 'px';
+    description!.style.top = e.pageY + -40 + 'px';
   }
 
   viewProduct(imageName: string) {
@@ -26,7 +26,6 @@ export class ProductListComponent {
 
   viewProductMobile(imageName: string, element: Element) {
     if (!element.classList.contains('description')) return;
-
     this.router.navigate(['work', 'view', imageName]);
   }
 
