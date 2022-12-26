@@ -5,7 +5,7 @@
         <a [routerLink]="['../', 'view', image.name]" *ngFor="let image of group; let index = index;  trackBy:identify"
             class="hidden md:flex image-shadow-wrapper items-center justify-center overflow-hidden flex h-full w-full relative"
             [ngClass]="{'bigger': image.isBigger, 'smaller': !image.isBigger}">
-            <p [id]="image.shortDescription" class="description absolute flex w-full justify-center items-center">{{
+            <p [id]="image.shortDescription" class="description font-bold absolute flex w-full justify-center items-center">{{
                 image.shortDescription }}</p>
             <img class="product-image h-full w-full"
                 [src]="'../../../../../assets/products/' + image.name + '/' + image.name + '.png'"
@@ -14,7 +14,7 @@
 
         <!-- Mobile -->
         <a [routerLink]="['../', 'view', image.name]" *ngFor="let image of group; let index = index;  trackBy:identify"
-            class="inline md:hidden image-shadow-wrapper items-center justify-center overflow-hidden flex w-full relative">
+            class="inline md:hidden image-shadow-wrapper items-center justify-center overflow-hidden flex h-full w-full relative">
             <p [id]="image.shortDescription" class="description absolute flex w-full justify-center items-center">{{
                 image.shortDescription }}</p>
             <img class="product-image h-full w-full"

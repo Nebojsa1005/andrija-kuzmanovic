@@ -3,7 +3,7 @@ import {
   Component,
   HostListener
 } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Subject, BehaviorSubject } from 'rxjs';
 import { NavbarService } from './../../shared/services/navbar.service';
 
 @Component({
@@ -14,11 +14,11 @@ import { NavbarService } from './../../shared/services/navbar.service';
 })
 export class NavbarComponent {
   transparent$?: Subject<boolean>;
-  phoneMenu?: Subject<boolean>;
+  phoneMenu$: BehaviorSubject<any>;
 
   constructor(private navbarService: NavbarService) {
     this.transparent$ = this.navbarService.transparent;
-    this.phoneMenu = this.navbarService.phoneMenu;
+    this.phoneMenu$ = this.navbarService.phoneMenu;
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -31,7 +31,11 @@ export class NavbarComponent {
       : element.classList.remove('navbar-inverse');
   }
 
-  togglePhoneMenu(event: any) {
-    this.navbarService.phoneMenu.next(event);
+  togglePhoneMenu(status: boolean) {
+    this.navbarService.phoneMenu.next(!status)
+  }
+
+  active () {
+    document.querySelector('.menu')?.classList.toggle('open')
   }
 }

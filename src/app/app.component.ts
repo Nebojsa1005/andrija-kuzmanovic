@@ -17,14 +17,6 @@ export class AppComponent {
 
   constructor(private navbarService: NavbarService, private router: Router) {
     this.phoneMenu$ = this.navbarService.phoneMenu;
-    this.phoneMenu$.subscribe(data=>console.log(data)
-    )
-    // this.phoneMenu$ = this.navbarService.phoneMenu
-    // .pipe(
-    //   tap(data => {
-    //     this.phoneMenu = data
-    //     console.log(this.phoneMenu);
-    //   }))
   }
 
   prepareRoute(outlet: RouterOutlet) {

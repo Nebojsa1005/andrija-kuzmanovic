@@ -1,23 +1,23 @@
-<nav class="navbar w-full px-8 md:px-36 py-2 md:py-8 flex justify-between items-center"
-  [ngClass]="{ transparent: transparent$ | async }" (scroll)="onWindowScroll()">
-  <a routerLink="" class="link active w-12 z-200">
-    <img class="h-12" src="../../../assets/logo/logo.png">
-  </a>
+<ng-container *ngIf="{phoneMenu: phoneMenu$ | async} as obs">
+  <nav class="navbar w-full px-8 md:px-36 py-2 md:py-4 flex justify-between items-center"
+    [ngClass]="{ transparent: transparent$ | async }" (scroll)="onWindowScroll()">
+    <a routerLink="" class="link active w-12 z-200">
+      <img class="h-8 md:h-10" src="../../../assets/logo/logo.png">
+    </a>
+  
+    <div class="hidden md:block">
+      <a class="mr-6 link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }"
+        routerLink="work">Work</a>
+      <a class="mr-6 link" routerLinkActive="active" routerLink="about">About</a>
+      <a class="link" routerLinkActive="active" routerLink="contact">Contact</a>
+    </div>
 
-  <div class="hidden md:block">
-    <a class="mr-6 link" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: false }"
-      routerLink="work">Work</a>
-    <a class="mr-6 link" routerLinkActive="active" routerLink="about">About</a>
-    <a class="link" routerLinkActive="active" routerLink="contact">Contact</a>
-  </div>
-
-  <div class="flex justify-center items-center h-full relative md:hidden">
-    <input type="checkbox" [ngModel]="phoneMenu | async" (ngModelChange)="togglePhoneMenu($event)" id="menu_checkbox" />
-    <label class="z-200 -mr-13" for="menu_checkbox">
-      <div></div>
-      <div></div>
-      <div></div>
-    </label>
-  </div>
-
-</nav>
+    <div class="btn-container" (click)="togglePhoneMenu(obs.phoneMenu)">
+      <div class="flex h-full justify-center relative items-center h-full md:hidden">
+        <div [ngClass]="{'open': obs.phoneMenu}" class="menu btn12" data-menu="12">
+          <div class="icon"></div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</ng-container>

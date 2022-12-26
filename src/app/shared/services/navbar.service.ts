@@ -6,6 +6,6 @@ import { BehaviorSubject, Subject } from 'rxjs'
 })
 export class NavbarService {
 
-  phoneMenu: Subject<boolean> = new Subject()
+  phoneMenu: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false)
   transparent = new BehaviorSubject(false)
 }

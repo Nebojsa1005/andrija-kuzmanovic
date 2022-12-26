@@ -1,6 +1,12 @@
 .height {
-    height: 20rem !important;
+    height: 25rem !important;
     overflow: hidden !important;
+}
+
+@media (max-width:650px) {
+    .height {
+        height: 20rem !important;
+    }
 }
 
 .carousel-button {

@@ -4,7 +4,8 @@
   z-index: 100;
   right: 100%;
   top: 0;
-  transition: all 0.25s ease-in-out;
+  transition: all 0.15s ease-in-out;
+  padding-top: calc(74px + 30px)
 }
 
 .phone-menu-active {
@@ -12,8 +13,10 @@
 }
 
 .phone-link {
+  font-size: 3rem;
   opacity: 0;
-  transition: all 2.25s ease-in;
+  transition: all 0.5s ease-in;
+  margin-bottom: 1.5rem;
 }
 
 .phone-link-show {
