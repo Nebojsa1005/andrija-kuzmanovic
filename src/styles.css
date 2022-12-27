@@ -108,7 +108,7 @@ ul {
     z-index: 200;
 }
 
-@media (min-width: 1560px) {
+@media (min-width: 2560px) {
     .application-wrapper {
         padding: 0 15% !important;
     }

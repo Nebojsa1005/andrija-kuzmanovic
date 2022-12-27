@@ -41,7 +41,7 @@ label div {
   position: relative;
   top: 0;
   height: 12px;
-  background-color: white;
+  background-color: #fff;
   margin-bottom: 12px;
   transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
     0.3s ease right;
@@ -87,7 +87,7 @@ label div:nth-child(2) {
   margin-right: -13px
 }
 
-@media (min-width: 1560px) {
+@media (min-width: 2560px) {
   .transparent {
     padding-left: 20%;
     padding-right: 20%;
@@ -100,6 +100,8 @@ label div:nth-child(2) {
 .btn-container {
   height: 30px;
   width: 30px;
+  position: relative;
+  z-index: 10000;
 }
 .btn12 {
   height: 100%;
@@ -112,14 +114,14 @@ label div:nth-child(2) {
   height: 4px;
   width: 30px;
   top: 1rem;
-  background-color: white;
+  background: #fff;
 }
 .btn12 .icon:before {
   transition-duration: 0.5s;
   position: absolute;
   width: 30px;
   height: 4px;
-  background-color: white;
+  background: #fff;
   content: "";
   top: -10px;
 }
@@ -128,7 +130,7 @@ label div:nth-child(2) {
   position: absolute;
   width: 30px;
   height: 4px;
-  background-color: white;
+  background: #fff;
   content: "";
   top: 10px;
 }

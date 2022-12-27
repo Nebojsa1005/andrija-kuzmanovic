@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, RouterOutlet } from '@angular/router';
-import { BehaviorSubject, map, Observable, Subject, take, tap } from 'rxjs';
+import { Observable } from 'rxjs';
 import { slideInAnimation } from './app.animation';
 import { NavbarService } from './shared/services/navbar.service';
 
@@ -13,7 +13,6 @@ import { NavbarService } from './shared/services/navbar.service';
 export class AppComponent {
   title = 'andrija-kuzmanovic';
   phoneMenu$?: Observable<boolean>;
-  // phoneMenu?: boolean
 
   constructor(private navbarService: NavbarService, private router: Router) {
     this.phoneMenu$ = this.navbarService.phoneMenu;
@@ -28,7 +27,11 @@ export class AppComponent {
   }
 
   phoneNavigation(path: string) {
-    this.navbarService.phoneMenu.next(false);
+    this.closePhoneMenu()
     this.router.navigate([path]);
+  }
+
+  closePhoneMenu() {
+    this.navbarService.phoneMenu.next(false);
   }
 }

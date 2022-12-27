@@ -1,9 +1,8 @@
-import { Router } from '@angular/router';
-import { DataService } from '../../../../../../shared/services/data.service';
-import { Component, HostListener, Input, OnInit } from '@angular/core';
-import { CarouselAlignMode, CarouselConfig } from 'ng-carousel-cdk';
-import { Product } from 'src/app/pages/home/models/products';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { CarouselAlignMode, CarouselConfig } from 'ng-carousel-cdk';
+import { DataService } from '../../../../../../shared/services/data.service';
 
 @Component({
   selector: 'app-type',

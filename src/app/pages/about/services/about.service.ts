@@ -12,10 +12,22 @@ export class AboutService {
 
   workExperience: WorkExperience[] = [
     {
+      companyName: 'Wollson',
+      type: 'Full-time',
+      position: 'UX / UI Designer',
+      time: 'January 2023 - Present',
+      tasks: [
+        'Investigated user experience design requirements for our suite of digital assets.',
+        'Developing and conceptualizing a comprehensive UI/UX design strategy for the brand.',
+        'Produced high-quality UX design solutions through wireframes, visual and graphic designs, flow diagrams, storyboards, site maps, and prototypes.',
+        'Designed UI elements and tools such as navigation menus, search boxes, tabs, and widgets for our digital assets.'
+      ]
+    },
+    {
       companyName: 'Origo Advertising',
       type: 'Full-time',
       position: 'Graphic designer',
-      time: 'May 2022 - Present',
+      time: 'May 2022 - December 2022',
       tasks: [
         'Helped 30 + clients in implementing their vision, mission and communicating their message through design by creating projects for them.',
         'Conceptualized 100+ posters, brochures, stationery, magazine, adverts, websites, photos, illustrations, vehicle wraps, product design...',

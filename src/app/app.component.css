@@ -5,7 +5,9 @@
   right: 100%;
   top: 0;
   transition: all 0.15s ease-in-out;
-  padding-top: calc(74px + 30px)
+  padding-top: calc(74px + 30px);
+  height: 100vh;
+  overflow: hidden;
 }
 
 .phone-menu-active {
@@ -21,4 +23,9 @@
 
 .phone-link-show {
   opacity: 1;
+}
+
+.phone-menu-no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }

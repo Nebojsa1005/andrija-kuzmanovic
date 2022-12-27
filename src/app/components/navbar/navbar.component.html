@@ -12,8 +12,8 @@
       <a class="link" routerLinkActive="active" routerLink="contact">Contact</a>
     </div>
 
-    <div class="btn-container" (click)="togglePhoneMenu(obs.phoneMenu)">
-      <div class="flex h-full justify-center relative items-center h-full md:hidden">
+    <div class="btn-container md:hidden" (click)="togglePhoneMenu(obs.phoneMenu)">
+      <div class="flex h-full justify-center relative items-center h-full">
         <div [ngClass]="{'open': obs.phoneMenu}" class="menu btn12" data-menu="12">
           <div class="icon"></div>
         </div>

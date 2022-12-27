@@ -60,7 +60,7 @@ export class DataService {
       isBigger: true
     },
     {
-      typeOfWork: 'Packaging',
+      typeOfWork: 'UX / UI Design',
       title: 'Dasigo',
       name: 'dasigo',
       shortDescription: 'Dasigo webpage',
@@ -166,7 +166,7 @@ export class DataService {
       title: "Caffe'd Italia social media",
       name: 'caffe-d-italia-social-media',
       shortDescription: "Caffe d' Italia social media",
-      field: '',
+      field: 'Social media design / Social media visual design',
       typeOfWork: 'Social Media',
       companyDescription: 'Caffè d’Italia has the ambitious project to bring everywhere and on every occasion, an espresso of the highest quality as the result of our passion and our system that makes the difference! Program used: Adobe Photoshop',
       sideImages: [
@@ -253,7 +253,7 @@ export class DataService {
       isBigger: false
     },
     {
-      typeOfWork: 'Branding',
+      typeOfWork: 'Social Media',
       title: 'Osteria Mozzarella social media',
       name: 'osteria-mozzarella-social-media',
       shortDescription: 'Osteria Mozzarella social media',
@@ -288,7 +288,7 @@ export class DataService {
     }
   ]
 
-  getProduct(name: string) {
+  getProduct(name: string): Product {
     return this.productList.filter(( product: Product ) => product.name === name)[0]
   }
 
@@ -298,5 +298,9 @@ export class DataService {
   
   getProductByName(name: string) {
     return this.productList.filter((product: Product) => product.name === name)[0]
+  }
+
+  getImageSrc(path: string, product: string) {
+    
   }
 }

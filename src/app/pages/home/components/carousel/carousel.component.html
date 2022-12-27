@@ -8,7 +8,7 @@
             [ngCarouselSlide]="carouselRef"
             let-item
             let-active="isActive">
-            <div class="carousel-slide grabbable h-full w-auto">
+            <div class="carousel-slide grabbable h-full max-h-screen w-auto">
                 <img [ngClass]="{'h-full': isMobile, 'w-full': !isMobile}" [src]="getImageSrc(item.name)">
             </div>
         </ng-template>

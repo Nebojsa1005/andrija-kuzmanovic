@@ -3,7 +3,7 @@
   transform: rotate(45deg);
 }
 
-@media (min-width: 1560px) {
+@media (min-width: 2560px) {
   .carousel-wrapper {
     height: auto;
   }  
