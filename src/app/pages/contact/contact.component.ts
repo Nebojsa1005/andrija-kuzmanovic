@@ -22,5 +22,4 @@ export class ContactComponent {
     { icon: 'linked_in', type: 'link', data: 'LinkedIn', link: 'https://linkedin.com/in/andrijakuzmanovic' },
     { icon: 'mail', type: 'email', data: 'Email', link:'andrijakuzmanovicc@gmail.com' }
   ]
-
 }

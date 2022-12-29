@@ -7,9 +7,9 @@
                 <p [id]="item.shortDescription" class="description absolute flex w-full justify-center items-center">{{
                     item.shortDescription }}</p>
                 <img class="hidden md:flex product-image w-full"
-                    [src]="'../../../../../assets/products/' + item.name + '/' + item.name + '.png'" [alt]="item.name">
+                    [src]="dataService.getImageSrc(baseImageSrc,item.name)" [alt]="item.name">
                 <img class="flex md:hidden product-image h-full"
-                    [src]="'../../../../../assets/products/' + item.name + '/' + item.name + '.png'" [alt]="item.name">
+                    [src]="dataService.getImageSrc(baseImageSrc,item.name)" [alt]="item.name">
             </div>
         </ng-template>
     </ng-carousel>

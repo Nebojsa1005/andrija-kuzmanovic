@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, OnDestroy } from '@angular/core';
+import { Component, Input, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CarouselConfig, CarouselWidthMode } from 'ng-carousel-cdk';
 import { NavbarService } from 'src/app/shared/services/navbar.service';
@@ -75,7 +75,8 @@ export class CarouselComponent implements OnInit, OnDestroy {
     });
   }
 
-  getImageSrc(productName: string): string {
+  @HostListener('window:resize', ['$event'])
+  getImageSrc(productName: string): string {    
     let isMobile = window.screen.width <= 640 ? true : false;
     const base = '../../../../../assets/products/';
     const productSrc = base + productName + '/' + productName;

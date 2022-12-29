@@ -7,7 +7,7 @@ import { WorkExperience } from '../models/work-experience';
 })
 export class AboutService {
 
-  introductionText: string = "Hello, my name is Andrija. I am a professional graphic designer with over 2 years of experience. I have experience in designing Business cards, Letterheads, Logos, Flyers, Social media posts, Products, Web sites and web applications. I use Figma, Adobe Xd, Illustrator, Photoshop, InDesign, Premiere Pro and After Effects to design the graphics for you. Not only that, but I will provide high-quality work that will make all of my clients happy. I will complete many projects with customer satisfaction. If you have work related to my skills, then contact me."
+  introductionText: string = "Experienced in designing Web sites, Web applications, Product packaging, Business cards, Logos, Flyers and Social media posts. I use Figma, Illustrator, Photoshop and InDesign to design the graphics for you. Not only that, but I provide high-quality work that will make all of my clients happy. If you have work related to my skills, contact me."
 
 
   workExperience: WorkExperience[] = [

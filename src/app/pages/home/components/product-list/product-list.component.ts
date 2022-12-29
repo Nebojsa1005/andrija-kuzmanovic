@@ -1,3 +1,4 @@
+import { DataService } from 'src/app/shared/services/data.service';
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from '../../models/products';
@@ -11,7 +12,9 @@ import { Product } from '../../models/products';
 export class ProductListComponent {
   @Input() productList?: Product[] = [];
 
-  constructor(private router: Router) {}
+  baseImageSrc: string = '../../../../../assets/products/'
+
+  constructor(private router: Router, public dataService: DataService) {}
 
   onElement(text: string, e: any) {
     const description: HTMLElement | null = document.getElementById(text)    

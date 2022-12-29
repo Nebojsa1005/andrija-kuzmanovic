@@ -11,10 +11,11 @@ import { ActivatedRoute } from '@angular/router';
 export class ViewComponent implements OnInit {
 
   product?: Product
+  baseImageSrc: string = '../../../../../assets/products/'
 
   constructor(
     private route: ActivatedRoute,
-    private dataService: DataService
+    public dataService: DataService
   ) { }
 
   ngOnInit(): void {

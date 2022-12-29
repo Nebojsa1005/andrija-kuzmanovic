@@ -11,6 +11,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 export class AllProjectsComponent implements OnInit {
 
   productList: any = []
+  baseImageSrc: string = '../../../../../assets/products/'
 
   get wantedProductList(): any {
 
@@ -31,14 +32,13 @@ export class AllProjectsComponent implements OnInit {
     return wantedProductList
   }
 
-  constructor(private dataService: DataService) { }
+  constructor(public dataService: DataService) { }
 
   ngOnInit(): void {
     this.productList = this.dataService.productList
     this.mapOrder()
   }
 
-  
   mapOrder() {
     const order: string[] = [
       'insel-webpage',
@@ -56,21 +56,14 @@ export class AllProjectsComponent implements OnInit {
       'waterfront-market',
       'osteria-mozzarella-social-media',
       'proteo-fit-chocolate-bar-dark'
-  ]  
-    
+    ]
+
     const names = this.productList.map((product: Product) => {
-      if (order.indexOf(product.name)) {
-        return product.name
-      } else {
-        return
-      } 
+      if (!order.indexOf(product.name)) return
+      return product.name
     })
-
-    names.sort((a: Product, b: Product) => order.indexOf(a.name) - order.indexOf(b.name) );
-
-    console.log(names);
+    names.sort((a: Product, b: Product) => order.indexOf(a.name) - order.indexOf(b.name));
   };
-
 
   onElement(text: string, e: any) {
     let rect = e.target.getBoundingClientRect();
@@ -84,5 +77,4 @@ export class AllProjectsComponent implements OnInit {
   identify(index: any, item: any) {
     return item.shortDescription
   }
-
 }

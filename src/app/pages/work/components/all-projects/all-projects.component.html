@@ -8,7 +8,7 @@
             <p [id]="image.shortDescription" class="description font-bold absolute flex w-full justify-center items-center">{{
                 image.shortDescription }}</p>
             <img class="product-image h-full w-full"
-                [src]="'../../../../../assets/products/' + image.name + '/' + image.name + '.png'"
+                [src]="dataService.getImageSrc(baseImageSrc,image.name)"
                 [alt]="image.description">
         </a>
 
@@ -18,7 +18,7 @@
             <p [id]="image.shortDescription" class="description absolute flex w-full justify-center items-center">{{
                 image.shortDescription }}</p>
             <img class="product-image h-full w-full"
-                [src]="'../../../../../assets/products/' + image.name + '/' + image.name + '.png'"
+                [src]="dataService.getImageSrc(baseImageSrc,image.name)"
                 [alt]="image.description">
         </a>
     </div>

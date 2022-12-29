@@ -5,6 +5,6 @@
         <p [id]="product.title" class="description font-bold absolute">{{ product.shortDescription }}</p>
         <img loading="lazy" [id]="product.name" class="product-image w-full"
             (mousemove)="onElement(product.title, $event)"
-            [src]="'../../../../../assets/products/' + product.name + '/' + product.name + '.png'">
+            [src]="dataService.getImageSrc(baseImageSrc,product.name)">
     </li>
 </ul>

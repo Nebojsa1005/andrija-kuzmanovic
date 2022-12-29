@@ -60,7 +60,7 @@ export class DataService {
       isBigger: true
     },
     {
-      typeOfWork: 'UX / UI Design',
+      typeOfWork: 'UX / UI design',
       title: 'Dasigo',
       name: 'dasigo',
       shortDescription: 'Dasigo webpage',
@@ -112,12 +112,12 @@ export class DataService {
       isBigger: true
     },
     {
-      typeOfWork: 'UX / UI design',
+      typeOfWork: 'Branding',
       title: 'Immunity Chef',
       name: 'immunity-chef',
       shortDescription: 'Immunity Chef Branding',
       field: 'Branding / Logo design',
-      companyDescription: 'Dasigo is primarily a family company that strives to maintain the spirit of the private companies that were formed. The spirit of family business and work that is reflected in good interpersonal relationships is imbued with the inspiration to create and create the best for consumers in the markets in which we operate.',
+      companyDescription: 'Immunity Chef is a delivery app, like Uber Eats and Postmates, that allows you to order food from your phone and have it delivered to your door. It offers local delivery of restaurant-prepared meals and other goods.',
       program: 'Adobe Illustrator',
       link: '',
       sideImages: [
@@ -300,7 +300,8 @@ export class DataService {
     return this.productList.filter((product: Product) => product.name === name)[0]
   }
 
-  getImageSrc(path: string, product: string) {
-    
+  getImageSrc(base: string, productName: string, folderName = '') {
+    if (!folderName) return `${base}${productName}/${productName}.png`
+    return `${base}${folderName}/${productName}.png`
   }
 }

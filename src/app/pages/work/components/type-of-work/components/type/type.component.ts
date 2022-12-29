@@ -16,8 +16,9 @@ export class TypeComponent implements OnInit {
   configForm: FormGroup = {} as FormGroup;
   wantedProducts: any = [];
   innerWidth?: number
+  baseImageSrc: string = '../../../../../assets/products/'
 
-  constructor(private dataService: DataService, private router: Router) { }
+  constructor(public dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
     this.innerWidth = window.innerWidth;
