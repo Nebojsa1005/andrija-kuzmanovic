@@ -25,6 +25,7 @@
     "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.2",
     "ng-carousel-cdk": "^1.10.0",
+    "node-sass": "^7.0.3",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

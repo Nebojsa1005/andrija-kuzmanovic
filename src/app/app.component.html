@@ -1,25 +1,27 @@
 <ng-container *ngIf="{ phoneMenu: phoneMenu$ | async } as menu">
-  <div class="w-full h-full min-h-screen min-w-screen bg-color relative application-wrapper" [ngClass]="{'phone-menu-no-scroll': menu.phoneMenu}">
+  <div class="w-full h-full min-h-screen min-w-screen bg-color relative application-wrapper"
+    [ngClass]="{'phone-menu-no-scroll': menu.phoneMenu}">
     <app-navbar></app-navbar>
 
     <router-outlet></router-outlet>
 
     <app-footer></app-footer>
 
-      <div (click)="closePhoneMenu()"
-        class="phone-menu flex flex-col items-start justify-start fixed w-screen h-screen opacity-90 px-8"
-        [ngClass]="{ 'phone-menu-active': menu.phoneMenu }">
-        <button (click)="phoneNavigation('work')" class="phone-link font-bold"
-          [ngClass]="{ 'phone-link-show': menu.phoneMenu }" routerLink="./work">
-          Work
-        </button>
-        <button (click)="phoneNavigation('about')" class="phone-link font-bold"
-          [ngClass]="{ 'phone-link-show': menu.phoneMenu }" routerLink="./about">
-          About
-        </button>
-        <button (click)="phoneNavigation('contact')" class="phone-link font-bold"
-          [ngClass]="{ 'phone-link-show': menu.phoneMenu }" routerLink="./contact">
-          Contact
-        </button>
-      </div>
+    <div (click)="closePhoneMenu()"
+      class="phone-menu flex flex-col items-start justify-start fixed w-screen h-screen opacity-90 px-8"
+      [ngClass]="{ 'phone-menu-active': menu.phoneMenu }">
+      <button (click)="phoneNavigation('work')" class="phone-link font-bold"
+        [ngClass]="{ 'phone-link-show': menu.phoneMenu }" routerLink="./work">
+        Work
+      </button>
+      <button (click)="phoneNavigation('about')" class="phone-link font-bold"
+        [ngClass]="{ 'phone-link-show': menu.phoneMenu }" routerLink="./about">
+        About
+      </button>
+      <button (click)="phoneNavigation('contact')" class="phone-link font-bold"
+        [ngClass]="{ 'phone-link-show': menu.phoneMenu }" routerLink="./contact">
+        Contact
+      </button>
+    </div>
   </div>
+</ng-container>

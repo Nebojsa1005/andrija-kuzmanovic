@@ -5,7 +5,7 @@ import { DataService } from '../../../../shared/services/data.service';
 @Component({
   selector: 'app-type-of-work',
   templateUrl: './type-of-work.component.html',
-  styleUrls: ['./type-of-work.component.css'],
+  styleUrls: ['./type-of-work.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TypeOfWorkComponent implements OnInit {

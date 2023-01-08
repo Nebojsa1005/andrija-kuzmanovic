@@ -3,11 +3,16 @@
 /* @tailwind components; */
 @tailwind utilities;
 
+@font-face {
+    font-family: 'bobo';
+    src: url('./assets/fonts/Carot Display Regular.ttf');
+}
+
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: 'Carot Display';
+    font-family: 'bobo';
     font-size: 1.875rem;
     line-height: 2.25rem;
     color: white

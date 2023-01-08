@@ -7,7 +7,7 @@ import { DataService } from '../../../../../../shared/services/data.service';
 @Component({
   selector: 'app-type',
   templateUrl: './type.component.html',
-  styleUrls: ['./type.component.css'],
+  styleUrls: ['./type.component.scss'],
 })
 export class TypeComponent implements OnInit {
   @Input() type: string = '';

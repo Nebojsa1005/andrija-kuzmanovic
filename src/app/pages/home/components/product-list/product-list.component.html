@@ -3,7 +3,7 @@
         (click)="viewProduct(product.name)" *ngFor="let product of productList">
 
         <p [id]="product.title" class="description font-bold absolute">{{ product.shortDescription }}</p>
-        <img loading="lazy" [id]="product.name" class="product-image w-full"
+        <img [id]="product.name" class="product-image w-full"
             (mousemove)="onElement(product.title, $event)"
             [src]="dataService.getImageSrc(baseImageSrc,product.name)">
     </li>

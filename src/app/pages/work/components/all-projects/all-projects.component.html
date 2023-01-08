@@ -1,54 +1,34 @@
 <div class="w-full">
-  <ng-container
-    *ngFor="
+  <ng-container *ngFor="
       let group of wantedProductList;
       let index = index;
       trackBy: identify
-    "
-  >
-    <div
-      class="flex hidden md:flex md:flex-row flex-col height overflow-hidden items-center justify-between gap-4 md:gap-8 mb-4 md:mb-8"
-    >
-      <a
-        [routerLink]="['../', 'view', image.name]"
-        *ngFor="let image of group; let index = index; trackBy: identify"
-        class="md:flex image-shadow-wrapper items-center justify-center overflow-hidden flex h-full w-full relative"
-        [ngClass]="{ bigger: image.isBigger, smaller: !image.isBigger }"
-      >
-        <p
-          [id]="image.shortDescription"
-          class="description font-bold absolute flex w-full justify-center items-center"
-        >
-          {{ image.shortDescription }}
-        </p>
-        <img
-          class="product-image h-full w-full"
-          [src]="dataService.getImageSrc(baseImageSrc, image.name)"
-          [alt]="image.description"
-        />
-      </a>
-    </div>
+    ">
+    <ul
+      class="flex hidden md:flex md:flex-row flex-col height overflow-hidden items-center justify-between gap-4 md:gap-8 mb-4 md:mb-8">
+      <li *ngFor="let image of group; let index = index; trackBy: identify" [ngClass]="{ bigger: image.isBigger, smaller: !image.isBigger }" class="h-full">
+        <a [routerLink]="['../', 'view', image.name]"
+          class="md:flex image-shadow-wrapper items-center justify-center overflow-hidden flex h-full w-full relative"
+          >
+          <p [id]="image.shortDescription"
+            class="description font-bold absolute flex w-full justify-center items-center">
+            {{ image.shortDescription }}
+          </p>
+          <img class="product-image h-full w-full" [src]="dataService.getImageSrc(baseImageSrc, image.name)"
+            [alt]="image.description" />
+        </a>
+      </li>
+    </ul>
 
     <!-- Mobile -->
-    <div
-      class="md:hidden flex flex-col overflow-hidden items-center justify-between gap-4 mb-4"
-    >
-      <a
-        [routerLink]="['../', 'view', image.name]"
-        *ngFor="let image of group; let index = index; trackBy: identify"
-        class="inline image-shadow-wrapper items-center justify-center overflow-hidden flex h-full w-full relative"
-      >
-        <p
-          [id]="image.shortDescription"
-          class="description absolute flex w-full justify-center items-center"
-        >
+    <div class="md:hidden flex flex-col overflow-hidden items-center justify-between gap-4 mb-4">
+      <a [routerLink]="['../', 'view', image.name]" *ngFor="let image of group; let index = index; trackBy: identify"
+        class="inline image-shadow-wrapper items-center justify-center overflow-hidden flex h-full w-full relative">
+        <p [id]="image.shortDescription" class="description absolute flex w-full justify-center items-center">
           {{ image.shortDescription }}
         </p>
-        <img
-          class="product-image h-full w-full"
-          [src]="dataService.getImageSrc(baseImageSrc, image.name)"
-          [alt]="image.description"
-        />
+        <img class="product-image h-full w-full" [src]="dataService.getImageSrc(baseImageSrc, image.name)"
+          [alt]="image.description" />
       </a>
     </div>
   </ng-container>
