@@ -26,7 +26,7 @@ export class DataService {
       name: 'insel-sleep',
       shortDescription: 'Insel sleep webpage',
       field: 'UX / UI design / Website design',
-      companyDescription: 'Insel sleep is handcrafted German cloudlike down duvets and pillows of finest 100% goose down made for long-lasting comfort, premium style, and luxurious sleep. Program used: Figma',
+      companyDescription: 'Insel sleep is handcrafted German cloudlike down duvets and pillows of finest 100% goose down made for long-lasting comfort, premium style, and luxurious sleep.',
       sideImages: [
         [
           { name: 'insel-sleep-1' },
@@ -65,7 +65,7 @@ export class DataService {
       name: 'dasigo',
       shortDescription: 'Dasigo webpage',
       field: 'UX / UI design / Website Design',
-      companyDescription: 'Dasigo is primarily a family company that strives to maintain the spirit of the private companies that were formed. The spirit of family business and work that is reflected in good interpersonal relationships is imbued with the inspiration to create and create the best for consumers in the markets in which we operate',
+      companyDescription: 'Dasigo is primarily a family company that strives to maintain the spirit of the private companies that were formed. The spirit of family business and work that is reflected in good interpersonal relationships is imbued with the inspiration to create and create the best for consumers in the markets in which we operate.',
       program: 'Figma',
       link: 'https://dasigo.rs/en/',
       sideImages: [
@@ -168,7 +168,7 @@ export class DataService {
       shortDescription: "Caffe d' Italia social media",
       field: 'Social media design / Social media visual design',
       typeOfWork: 'Social Media',
-      companyDescription: 'Caffè d’Italia has the ambitious project to bring everywhere and on every occasion, an espresso of the highest quality as the result of our passion and our system that makes the difference! Program used: Adobe Photoshop',
+      companyDescription: 'Caffè d’Italia has the ambitious project to bring everywhere and on every occasion, an espresso of the highest quality as the result of our passion and our system that makes the difference!',
       sideImages: [
         [
           { name: 'caffe-d-italia-social-media-1' },
@@ -194,8 +194,8 @@ export class DataService {
       link: 'https://stararakija.rs/',
       sideImages: [
         [
-          { name: 'vintage-fest-1' },
-          { name: 'vintage-fest-2' }
+          { name: 'stara-rakija-billboard-1' },
+          { name: 'stara-rakija-billboard-2' }
         ]
       ],
       program: 'Adobe Illustrator',
@@ -206,7 +206,7 @@ export class DataService {
       title: 'Proteo Fit Chocolate Bar',
       name: 'proteo-fit-chocolate-bar-white',
       field: 'Packaging / Product design',
-      companyDescription: 'Dasigo is primarily a family company that strives to maintain the spirit of the private companies that were formed. The spirit of family business and work that is reflected in good interpersonal relationships is imbued with the inspiration to create and create the best for consumers in the markets in which we operate.',
+      companyDescription: 'Gluten-free chocolate Protein bar is an ideal snack for all active people. It is a great choice for various sports activities, but also as a meal replacement for people in the office, on the road or in nature. Protein bar helps stimulate muscle growth and regeneration and prevent catabolic processes caused by physical exertion.',
       program: 'Adobe Illustrator',
       link: '',
       sideImages: [
@@ -220,9 +220,9 @@ export class DataService {
     },
     {
       typeOfWork: 'Digital Design',
-      title: '"Vintage Fest"',
+      title: '“Vintage fest”',
       name: 'vintage-fest',
-      shortDescription: '"Vintage fest"',
+      shortDescription: '“Vintage fest”',
       field: 'Digital design / Festival design',
       companyDescription: 'At the first Vintage Fest in Belgrade, numerous decorative objects, jewelry, wardrobes, frames, plaques and other interesting things that can beautify the home or complement the wardrobe with special and unique retro pieces will be exhibited.',
       link: '',
@@ -245,8 +245,8 @@ export class DataService {
       link: '',
       sideImages: [
         [
-          { name: 'vintage-fest-1' },
-          { name: 'vintage-fest-2' }
+          { name: 'waterfront-market-1' },
+          { name: 'waterfront-market-2' }
         ]
       ],
       program: 'Adobe Illustrator',
@@ -274,7 +274,7 @@ export class DataService {
       title: 'Proteo Fit Chocolate Bar',
       name: 'proteo-fit-chocolate-bar-dark',
       field: 'Packaging / Product design',
-      companyDescription: 'Dasigo is primarily a family company that strives to maintain the spirit of the private companies that were formed. The spirit of family business and work that is reflected in good interpersonal relationships is imbued with the inspiration to create and create the best for consumers in the markets in which we operate.',
+      companyDescription: 'Gluten-free chocolate Protein bar is an ideal snack for all active people. It is a great choice for various sports activities, but also as a meal replacement for people in the office, on the road or in nature. Protein bar helps stimulate muscle growth and regeneration and prevent catabolic processes caused by physical exertion.',
       link: '',
       sideImages: [
         [

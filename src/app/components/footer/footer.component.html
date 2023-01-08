@@ -1,24 +1,13 @@
-<!-- Desktop -->
-<footer class="hidden md:flex px-32 py-20 flex justify-between items-center overflow-hidden">
-  <p class="text-xl">Made with Passion by Andrija</p>
-
-  <div>
-    <a *ngFor="let data of userData.socialMediaLinks; let index = index" [href]="data.link" target="_blank"
-      [ngClass]="{ 'mr-6': index !== userData.socialMediaLinks.length - 1 }" class="cursor-pointer mr-6 text-xl">{{
-      data.name }}</a>
-  </div>
-</footer>
-
-<!-- Mobile -->
-<footer class="flex flex-col md:hidden justify-center items-center px-4 py-12">
-  <a routerLink="" class="link active w-12 mb-8">
+<footer class="flex-col md:flex-row  px-4 py-12 md:px-32 md:py-20 flex justify-center md:justify-between items-center overflow-hidden">
+  <a routerLink="" class="link active w-12 mb-8 block md:hidden">
     <img class="h-8" src="../../../assets/logo/logo.png" />
   </a>
 
-  <p class="text-2xl md:text-3xl mb-4 md:mb-8">2020. All rights reserved.</p>
+  <p class="text-2xl mb-4 md:mb-0">Made with Passion by Andrija</p>
 
   <div>
-    <a class="text-2xl md:text-3xl" *ngFor="let data of userData.socialMediaLinks; let index = index" [href]="data.link"
-      target="_blank" [ngClass]="{ 'mr-3': index !== userData.socialMediaLinks.length - 1 }">{{ data.name }}</a>
+    <a *ngFor="let data of userData.socialMediaLinks; let index = index" [href]="data.link" target="_blank"
+      [ngClass]="{ 'mr-6': index !== userData.socialMediaLinks.length - 1 }" class="cursor-pointer mr-3 md:mr-6 text-xl text-2xl">{{
+      data.name }}</a>
   </div>
 </footer>
