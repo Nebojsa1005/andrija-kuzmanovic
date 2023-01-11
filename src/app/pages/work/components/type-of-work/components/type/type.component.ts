@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CarouselAlignMode, CarouselConfig } from 'ng-carousel-cdk';
 import { DataService } from '../../../../../../shared/services/data.service';
+import { isMobile } from 'is-mobile'
 
 @Component({
   selector: 'app-type',
@@ -15,30 +16,28 @@ export class TypeComponent implements OnInit {
   config: CarouselConfig<any> = {};
   configForm: FormGroup = {} as FormGroup;
   wantedProducts: any = [];
-  innerWidth?: number
   baseImageSrc: string = '../../../../../assets/products/'
 
   constructor(public dataService: DataService, private router: Router) { }
 
   ngOnInit(): void {
-    this.innerWidth = window.innerWidth;
     this.initializeCarousel();
   }
   initializeCarousel() {
     this.wantedProducts = this.dataService.getProductsByType(this.type);
 
     this.config = {
-      slideWidth: this.innerWidth && this.innerWidth > 640 ? 42 : 100,
+      slideWidth: !isMobile() ? 42 : 100,
       alignMode: CarouselAlignMode.LEFT,
       transitionDuration: 500,
       autoplayDelay: 0,
-      shouldLoop: false,
+      shouldLoop: true,
       items: this.wantedProducts,
       autoplayEnabled: false,
       dragEnabled: true,
       shouldRecalculateOnResize: true,
       recalculateDebounce: 300,
-      allowKeyboardNavigation: true,
+      allowKeyboardNavigation: false,
     };
 
     this.configForm = new FormGroup({

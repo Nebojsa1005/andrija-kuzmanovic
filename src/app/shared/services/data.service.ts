@@ -57,7 +57,7 @@ export class DataService {
           { name: 'oshee-social-media-4' },
         ]
       ],
-      isBigger: true
+      isBigger: false
     },
     {
       typeOfWork: 'UX / UI design',
@@ -143,7 +143,7 @@ export class DataService {
       ],
       program: 'Adobe Illustrator',
       shortDescription: "Tesla charge batteries",
-      isBigger: true
+      isBigger: false
     },
     {
       typeOfWork: 'UX / UI design',
@@ -216,7 +216,7 @@ export class DataService {
         ]
       ],
       shortDescription: 'ProteFit chocolate bar',
-      isBigger: true
+      isBigger: false
     },
     {
       typeOfWork: 'Digital Design',
@@ -250,7 +250,7 @@ export class DataService {
         ]
       ],
       program: 'Adobe Illustrator',
-      isBigger: false
+      isBigger: true
     },
     {
       typeOfWork: 'Social Media',
@@ -267,7 +267,7 @@ export class DataService {
         ]
       ],
       program: 'Adobe Illustrator',
-      isBigger: true
+      isBigger: false
     },
     {
       typeOfWork: 'Packaging',
@@ -284,7 +284,7 @@ export class DataService {
       ],
       program: 'Adobe Illustrator',
       shortDescription: "ProteoFit chocolate bar",
-      isBigger: true
+      isBigger: false
     }
   ]
 

@@ -3,6 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { CarouselConfig, CarouselWidthMode } from 'ng-carousel-cdk';
 import { NavbarService } from 'src/app/shared/services/navbar.service';
 import { CarouselItem } from '../../models/products';
+import { isMobile } from 'is-mobile'
 
 @Component({
   selector: 'app-carousel',
@@ -16,14 +17,11 @@ export class CarouselComponent implements OnInit, OnDestroy {
   configForm: FormGroup = {} as FormGroup;
   itemIndex = 0;
   maxWidth = 0;
-  isMobile!: boolean
 
   readonly MAX_WIDTH_PERCENTS = 110;
   readonly MAX_WIDTH_PIXELS = 1000;
 
-  constructor(private navbarService: NavbarService) {
-    this.isMobile = window.screen.width <= 640
-  }
+  constructor(private navbarService: NavbarService) {}
 
   ngOnInit() {
     this.initializeCarousel();
@@ -49,7 +47,7 @@ export class CarouselComponent implements OnInit, OnDestroy {
       autoplayDelay: 2000,
       shouldLoop: true,
       items: this.carouselImages,
-      autoplayEnabled: false,
+      autoplayEnabled: true,
       dragEnabled: true,
       shouldRecalculateOnResize: true,
       recalculateDebounce: 300,
@@ -77,11 +75,10 @@ export class CarouselComponent implements OnInit, OnDestroy {
 
   @HostListener('window:resize', ['$event'])
   getImageSrc(productName: string): string {    
-    let isMobile = window.screen.width <= 640 ? true : false;
     const base = '../../../../../assets/products/';
     const productSrc = base + productName + '/' + productName;
 
-    return isMobile ? productSrc + '-h-lg.png' : productSrc + '.png';
+    return isMobile() ? productSrc + '-h-lg.png' : productSrc + '.png';
   }
 
   ngOnDestroy() {
