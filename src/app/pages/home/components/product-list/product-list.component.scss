@@ -4,6 +4,10 @@
     transform: scale(1.1);
 }
 
+.image-shadow-wrapper {
+    max-height: 40rem;
+}
+
 @media (max-width: 640px) {
     .image-shadow-wrapper {
         height: 20rem;
