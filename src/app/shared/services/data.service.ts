@@ -212,7 +212,7 @@ export class DataService {
       sideImages: [
         [
           { name: 'proteo-fit-chocolate-bar-white-1' },
-          { name: 'proteo-fit-chocolate-bar-white-2' }
+          // { name: 'proteo-fit-chocolate-bar-white-2' }
         ]
       ],
       shortDescription: 'ProteFit chocolate bar',
@@ -229,7 +229,7 @@ export class DataService {
       sideImages: [
         [
           { name: 'vintage-fest-1' },
-          { name: 'vintage-fest-2' }
+          // { name: 'vintage-fest-2' }
         ]
       ],
       program: 'Adobe Photoshop',
@@ -262,8 +262,8 @@ export class DataService {
       link: 'https://mozzarella.rs/',
       sideImages: [
         [
-          { name: 'vintage-fest-1' },
-          { name: 'vintage-fest-2' }
+          { name: 'osteria-mozzarella-social-media-1' },
+          { name: 'osteria-mozzarella-social-media-2' }
         ]
       ],
       program: 'Adobe Illustrator',
@@ -279,7 +279,7 @@ export class DataService {
       sideImages: [
         [
           { name: 'proteo-fit-chocolate-bar-dark-1' },
-          { name: 'proteo-fit-chocolate-bar-dark-2' }
+          // { name: 'proteo-fit-chocolate-bar-dark-2' }
         ]
       ],
       program: 'Adobe Illustrator',

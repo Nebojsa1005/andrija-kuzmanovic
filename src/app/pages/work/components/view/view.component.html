@@ -8,7 +8,7 @@
 
     <div class="flex flex-col md:flex-row overflow-hidden w-full gap-4 md:gap-8 mb-4 md:mb-8 justify-between items-center"
         *ngFor="let group of product.sideImages">
-        <div class="w-full md:w-1/2" *ngFor="let image of group">
+        <div class="w-full md:w-1/2" [ngClass]="{ 'md:w-full': sideImagesNum === 0 }"  *ngFor="let image of group">
             <img class="product-image w-full" [src]="dataService.getImageSrc(baseImageSrc,image.name, product.name)">
         </div>
     </div>

@@ -13,6 +13,11 @@ export class ViewComponent implements OnInit {
   product?: Product
   baseImageSrc: string = '../../../../../assets/products/'
 
+  get sideImagesNum() {
+    if (!this.product) return -1
+    return this.product.sideImages.length - 1
+  }
+
   constructor(
     private route: ActivatedRoute,
     public dataService: DataService

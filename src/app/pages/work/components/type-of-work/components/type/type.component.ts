@@ -1,19 +1,21 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { isMobile } from 'is-mobile';
 import { CarouselAlignMode, CarouselConfig } from 'ng-carousel-cdk';
 import { DataService } from '../../../../../../shared/services/data.service';
-import { isMobile } from 'is-mobile'
+import { Product } from './../../../../../home/models/products';
 
 @Component({
   selector: 'app-type',
   templateUrl: './type.component.html',
   styleUrls: ['./type.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TypeComponent implements OnInit {
   @Input() type: string = '';
 
-  config: CarouselConfig<any> = {};
+  config: CarouselConfig<Product> = {};
   configForm: FormGroup = {} as FormGroup;
   wantedProducts: any = [];
   baseImageSrc: string = '../../../../../assets/products/'
