@@ -10,6 +10,9 @@ import { ViewComponent } from './components/view/view.component';
 
 import { CarouselModule } from 'ng-carousel-cdk';
 import { TypeComponent } from './components/type-of-work/components/type/type.component';
+import { ViewDialogComponent } from './components/view/view-dialog/view-dialog.component';
+import {MatDialogModule} from '@angular/material/dialog';
+
 
 @NgModule({
   declarations: [
@@ -17,13 +20,15 @@ import { TypeComponent } from './components/type-of-work/components/type/type.co
     TypeOfWorkComponent,
     AllProjectsComponent,
     ViewComponent,
-    TypeComponent
+    TypeComponent,
+    ViewDialogComponent
   ],
   imports: [
     CommonModule,
     WorkRoutingModule,
     CarouselModule,
-    AngularMaterialModule
+    AngularMaterialModule,
+    MatDialogModule
   ],
   providers: [],
 })

@@ -16,7 +16,7 @@
     </ng-template>
   </ng-carousel>
 
-  <div *ngIf="wantedProducts.length >= 2"
+  <div *ngIf="wantedProducts.length > 2"
     class="control-panel absolute left-0 right-0 top-0 bottom-0 w-full px-4 md:px-8 md:px-12 flex justify-between items-center pointer-events-none">
     <button (click)="carouselRef.prev()"
       class="carousel-button p-4 flex items-center justify-center pointer-events-auto">

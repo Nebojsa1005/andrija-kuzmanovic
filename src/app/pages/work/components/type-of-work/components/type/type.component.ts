@@ -33,7 +33,7 @@ export class TypeComponent implements OnInit {
       alignMode: CarouselAlignMode.LEFT,
       transitionDuration: 500,
       autoplayDelay: 0,
-      shouldLoop: true,
+      shouldLoop: false,
       items: this.wantedProducts,
       autoplayEnabled: false,
       dragEnabled: true,

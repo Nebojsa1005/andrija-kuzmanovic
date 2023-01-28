@@ -228,7 +228,7 @@ export class DataService {
       link: '',
       sideImages: [
         [
-          { name: 'vintage-fest-1' },
+          // { name: 'vintage-fest-1' },
           // { name: 'vintage-fest-2' }
         ]
       ],
