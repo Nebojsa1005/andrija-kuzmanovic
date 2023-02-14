@@ -1,6 +1,8 @@
-<div mat-dialog-content>
-  My favorite animal is:
-  <ul>
-   hlkjhlkjh
-  </ul>
+<div class="flex items-center justify-end mb-2">
+  <button mat-dialog-close mat-icon-button><mat-icon>close</mat-icon></button>
+</div>
+<div class="object-contain">
+  <div class="flex items-center justify-center max-w-full">
+    <img appNoDownload class="dialog-image object-contain" [src]="dataService.getImageSrc(baseImageSrc, data.image, data.product)">
+  </div>
 </div>

@@ -1,5 +1,4 @@
-import { AngularMaterialModule } from './../../angular-material.module';
-import { MatIconModule } from '@angular/material/icon';
+import { SharedModule } from './../../shared/models/shared.module';
 import { WorkComponent } from './work.component';
 import { NgModule } from '@angular/core';
 import { WorkRoutingModule } from './work-routing.module';
@@ -21,14 +20,14 @@ import {MatDialogModule} from '@angular/material/dialog';
     AllProjectsComponent,
     ViewComponent,
     TypeComponent,
-    ViewDialogComponent
+    ViewDialogComponent,
   ],
   imports: [
     CommonModule,
     WorkRoutingModule,
     CarouselModule,
-    AngularMaterialModule,
-    MatDialogModule
+    SharedModule,
+    MatDialogModule,
   ],
   providers: [],
 })

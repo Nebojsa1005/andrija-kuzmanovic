@@ -10,14 +10,14 @@ import { HomeModule } from './pages/home/home.module';
 import { AppComponent } from './app.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { AngularMaterialModule } from './angular-material.module';
+import { SharedModule } from './shared/models/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +26,7 @@ import { AngularMaterialModule } from './angular-material.module';
     BrowserAnimationsModule,
     HomeModule,
     AboutModule,
-    AngularMaterialModule,
+    SharedModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

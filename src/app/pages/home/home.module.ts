@@ -1,3 +1,4 @@
+import { SharedModule } from './../../shared/models/shared.module';
 import { MatButtonModule } from '@angular/material/button';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     HomeRoutingModule,
     NgbModule,
-    MatButtonModule
+    MatButtonModule,
+    SharedModule
   ]
 })
 export class HomeModule {}

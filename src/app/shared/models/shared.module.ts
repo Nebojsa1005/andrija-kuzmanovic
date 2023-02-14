@@ -1,3 +1,4 @@
+import { NoDownloadDirective } from '../directives/no-download.directive';
 import { MatIconModule } from '@angular/material/icon';
 import { NgModule } from '@angular/core';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -6,7 +7,7 @@ import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [NoDownloadDirective],
   imports: [
     MatIconModule,
     MatToolbarModule,
@@ -15,8 +16,9 @@ import {MatButtonModule} from '@angular/material/button';
   exports: [
     MatIconModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    NoDownloadDirective
   ],
   providers: [],
 })
-export class AngularMaterialModule { }
+export class SharedModule { }

@@ -1,3 +1,4 @@
+import { isMobile } from 'is-mobile';
 import { DataService } from '../../../../shared/services/data.service';
 import { Product } from './../../../home/models/products';
 import { Component, OnInit } from '@angular/core';
@@ -32,10 +33,16 @@ export class ViewComponent implements OnInit {
   }
 
   openDialog(baseImageSrc: string, image: string, product: string) {
+    if (isMobile()) return
+    
     this.dialog.open(ViewDialogComponent, {
+      height: 'auto',
+      width: 'auto',
       data: {
-        baseImageSrc, image, product
-      },
+        baseImageSrc,
+        image,
+        product
+      }
     });
   }
 }
