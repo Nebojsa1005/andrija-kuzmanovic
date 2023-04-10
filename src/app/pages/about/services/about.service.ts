@@ -7,7 +7,7 @@ import { WorkExperience } from '../models/work-experience';
 })
 export class AboutService {
 
-  introductionText: string = "Experienced in designing Web sites, Web applications, Product packaging, Business cards, Logos, Flyers and Social media posts. I use Figma, Illustrator, Photoshop and InDesign to design the graphics for you. Not only that, but I provide high-quality work that will make all of my clients happy. If you have work related to my skills, contact me."
+  introductionText: string = "Experienced UX/UI Designer with a passion for creating intuitive and engaging digital experiences. With a background in graphic design, I bring a unique blend of creativity and technical skills to the table."
 
 
   workExperience: WorkExperience[] = [
@@ -35,16 +35,17 @@ export class AboutService {
         'Enhanced social media marketing by designing compiling campaigns.'
       ]
     },
-    {
-      companyName: 'NCR Corporation',
-      type: 'Full-time',
-      position: 'Help desk specialist',
-      time: 'April 2020 - May 2020',
-      tasks: [
-        'Coordinated, diagnosed and troubleshot incoming end-user requests.',
-        'Provided technical support services to end-users either local or remote with problems or issues related to information technology services including but not limited to: Applications, workstations, conference rooms, collaboration services, and network services.'
-      ]
-    },
+    // remove ncr 
+    // {
+    //   companyName: 'NCR Corporation',
+    //   type: 'Full-time',
+    //   position: 'Help desk specialist',
+    //   time: 'April 2020 - May 2020',
+    //   tasks: [
+    //     'Coordinated, diagnosed and troubleshot incoming end-user requests.',
+    //     'Provided technical support services to end-users either local or remote with problems or issues related to information technology services including but not limited to: Applications, workstations, conference rooms, collaboration services, and network services.'
+    //   ]
+    // },
     {
       companyName: 'Upwork',
       type: 'Freelance',
@@ -66,10 +67,11 @@ export class AboutService {
       field: 'Communication technologies',
       time: 'October 2017 - Present'
     },
-    {
-      name: 'XV Belgrade High School',
-      field: 'Natural sciences and mathematics',
-      time: 'September 2013 - Jun 2017'
-    }
+    // remove high school
+    // {
+    //   name: 'XV Belgrade High School',
+    //   field: 'Natural sciences and mathematics',
+    //   time: 'September 2013 - Jun 2017'
+    // }
   ]
 }
